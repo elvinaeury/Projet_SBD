@@ -97,6 +97,16 @@ Preliminary - official,Monday 2 January 2017,16:43,Hawker 800XP,Pinnacle Air Cha
 
 
 ```
+- données provenant encore du site web [Aviation safety](https://aviation-safety.net/database/) par web scrapping
+
+```
+date,type,registration,operator,fat.,location, ,pic,cat
+03-JAN-2014,Boeing 737-8H4 (WL),N8327A,Southwest Airlines,0,Las Vegas-Mc...,, ,A2
+05-JAN-2014,Boeing 767-3W0ER,HS-BKE,"Orient Thai Airlines, op.for Saudi Arabian",0,Madinah-Moha...,, ,A2
+05-JAN-2014,Canadair Challenger 601-3R,N115WF,Vineland Corporation,1,Aspen-Pitkin...,,,A1
+05-JAN-2014,Airbus A320-231,VT-ESH,Air India,0,Jaipur Inter...,,,A1
+07-JAN-2014,Fokker 50,C5-SSA,South Supreme Airlines,0,Aweil Airport,, ,A2
+```
 
 
 
