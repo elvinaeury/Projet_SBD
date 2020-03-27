@@ -23,6 +23,7 @@ Le sujet:
 - [x] Créer un [modèle relationnel](https://github.com/elvinaeury/projet_test/blob/master/modele_relationnel/description_modele_relationnel.md) une fois que toutes les données ont été récupérées
 - [x] Se renseigner sur le web scrapping (avec module `beautiful-soup`)
 - [x] [Web Scrapping](https://github.com/elvinaeury/projet_test/blob/master/Web_scrapping/web.md) (En cours)
+- [ ] Nettoyer les données récupérées
 
 
 
