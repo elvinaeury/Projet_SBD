@@ -68,10 +68,10 @@ Event Id | Investigation Type | Accident Number | Event Date | Location | Countr
 |  City         | Main city served by airport |    
 | Country | Country or territory where airport is located. |
 | IATA | géocode à trois lettre décrivant des aéroport |
-| ICAO |  code ICAO ( *utile ? (voir si utilisé dans d'autres bases sinon à enlever* ) | 
+| ICAO |  code ICAO  | 
 | Latitude | Decimal degrees, usually to six significant digits. Negative is South, positive is North. |
 | Longitude | Decimal degrees, usually to six significant digits. Negative is West, positive is East. |
-| Altitude | In feet (*utile ?*) |
+| Altitude | In feet  |
 | Timezone | Hours offset from UTC. Fractional hours are expressed as decimals, eg. India is 5.5. |
 | DST | Daylight savings time. One of E (Europe), A (US/Canada), S (South America), O (Australia), Z (New Zealand), N (None) or U (Unknown). |
 | Tz databae time zone | Timezone in "tz" (Olson) format, eg. "America/Los_Angeles". |
