@@ -97,7 +97,8 @@ Preliminary - official,Monday 2 January 2017,16:43,Hawker 800XP,Pinnacle Air Cha
 
 
 ```
-- données provenant encore du site web [Aviation safety](https://aviation-safety.net/database/) par web scrapping
+- autre format de données provenant également du site web [Aviation safety](https://aviation-safety.net/database/)
+
 
 ```
 date,type,registration,operator,fat.,location, ,pic,cat
