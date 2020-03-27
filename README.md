@@ -40,8 +40,6 @@ Le sujet:
 
 
 ### Partie visualisation
-- viualiser une carte du monde qui affiche par des points les lieu où il y a eu des accidents (pendant une certaine période)
-- bonus: quand on passe la souris sur ces différents points on a plus renseignements quant à l'incident voire ajouter des photos si possible
 
 
 ## Données
