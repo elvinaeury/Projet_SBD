@@ -84,7 +84,7 @@ Event Id | Investigation Type | Accident Number | Event Date | Location | Countr
 4,"Nadzab Airport","Nadzab","Papua New Guinea","LAE","AYNZ",-6.569803,146.725977,239,10,"U","Pacific/Port_Moresby","airport","OurAirports"
 5,"Port Moresby Jacksons International Airport","Port Moresby","Papua New Guinea","POM","AYPY",-9.443380355834961,147.22000122070312,146,10,"U","Pacific/Port_Moresby","airport","OurAirports"
 ```
-- données venant du site web [Aviation safety](https://aviation-safety.net/database/) à récupérer via le web scrapping
+- données venant du site web [Aviation safety](https://aviation-safety.net/database/) récupérées
 
 ```
 Status:,Date:,Time:,Type:,Operator:,Leased from:,Registration:,C/n / msn:,First flight:,Total airframe hrs:,Year built:,Engines:,Cycles:,Crew:,Passengers:,Ground casualties:,Collision casualties:,Aircraft damage:,Aircraft fate:,Location:,Phase:,Nature:,Departure airport:,Destination airport:,Flightnumber:,Probable cause:,Total:
