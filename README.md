@@ -22,8 +22,8 @@ Le sujet:
 - [ ] Remplir le GitHub public avec plus de renseignements pour les profs
 - [x] Créer un [modèle relationnel](https://github.com/elvinaeury/projet_test/blob/master/modele_relationnel/description_modele_relationnel.md) une fois que toutes les données ont été récupérées
 - [x] Se renseigner sur le web scrapping (avec module `beautiful-soup`)
-- [x] [Web Scrapping](https://github.com/elvinaeury/projet_test/blob/master/Web_scrapping/web.md) (En cours)
-- [ ] Nettoyer les données récupérées
+- [x] [Web Scrapping](https://github.com/elvinaeury/projet_test/blob/master/Web_scrapping/web.md)
+- [x] Nettoyer les données récupérées
 
 
 
@@ -85,7 +85,7 @@ Event Id | Investigation Type | Accident Number | Event Date | Location | Countr
 4,"Nadzab Airport","Nadzab","Papua New Guinea","LAE","AYNZ",-6.569803,146.725977,239,10,"U","Pacific/Port_Moresby","airport","OurAirports"
 5,"Port Moresby Jacksons International Airport","Port Moresby","Papua New Guinea","POM","AYPY",-9.443380355834961,147.22000122070312,146,10,"U","Pacific/Port_Moresby","airport","OurAirports"
 ```
-- données venant du site web [Aviation safety](https://aviation-safety.net/database/) récupérées
+- données venant du site web [Aviation safety](https://aviation-safety.net/database/) récupérées  (avec clé primaire)
 
 ```
 Status:,Date:,Time:,Type:,Operator:,Leased from:,Registration:,C/n / msn:,First flight:,Total airframe hrs:,Year built:,Engines:,Cycles:,Crew:,Passengers:,Ground casualties:,Collision casualties:,Aircraft damage:,Aircraft fate:,Location:,Phase:,Nature:,Departure airport:,Destination airport:,Flightnumber:,Probable cause:,Total:
@@ -98,7 +98,7 @@ Preliminary - official,Monday 2 January 2017,16:43,Hawker 800XP,Pinnacle Air Cha
 
 
 ```
-- autre format de données provenant également du site web [Aviation safety](https://aviation-safety.net/database/)
+- autre format de données provenant également du site web [Aviation safety](https://aviation-safety.net/database/) (avec clé primaire)
 
 
 ```
