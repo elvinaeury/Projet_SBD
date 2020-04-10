@@ -1,10 +1,11 @@
+# Descriptif des données 
 
-## fichier de données record2.zip
-
-Ce sont les données brutes avant nettoyage obtenues grâce au deuxieme web scraping récupérant les données générales sur les accidents. Nous avons toutefois crée un identifiant pour pouvoir croiser les deux tables. 
+## Fichier de données record2.zip
 
 Un dossier comportant tous les csv par année. 
-Une ligne contient tout d'abord 
+
+Ce sont les données brutes avant nettoyage obtenues grâce au deuxieme web scraping récupérant les données générales sur les accidents. Nous avons toutefois crée un identifiant pour pouvoir croiser nos deux jeux de données (obtenus par web scraping). 
+
 - **un identifiant**: unique obtenu à partir de l'url de la page d'accident
 - **une date**: de l'accident
 - **type**: type d'avion
