@@ -53,7 +53,14 @@ On y utilise la fonction `csv.DictWriter`
 Ce fichier python sert à récupérer plusieurs fichiers csv par année donnant les informations générales sur les accidents.
 
 
+#### les fonctions `page_princpale(annee)` et `toutes_les_pages_par_annee(year)`ne changent pas du précédent script
 
+#### la fonction `liens_par_annee` 
+Renvoie  une liste de listes des données générales des accidents 
+
+
+#### la fonction fichier_csv 
+permet l'écriture des fichiers csv par année, ici c'est beaucoup plus simple et rapide que précedemment notamment car l'utilisation des listes est plus rapide à écrire
 
 ### fichier de données record2
 
