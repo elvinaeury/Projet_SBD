@@ -5,16 +5,16 @@ Ce sont les données brutes avant nettoyage obtenues grâce au deuxieme web scra
 
 Un dossier comportant tous les csv par année. 
 Une ligne contient tout d'abord 
-- un identifiant: unique obtenu à partir de l'url de la page d'accident
-- une date: de l'accident
-- type: type d'avion
-- registration: numéro/ immatriculation
-- operator: Ccompagnie aérienne
-- fat.: nombre de victimes
-- location:
-- une colonne vide à supprimer 
-- pic: colonne vide à supprimer qui contenait initialement une image
-- cat: catégorie de l'accident 
+- **un identifiant**: unique obtenu à partir de l'url de la page d'accident
+- **une date**: de l'accident
+- **type**: type d'avion
+- **registration**: numéro/ immatriculation
+- **operator**: Ccompagnie aérienne
+- **fat.**: nombre de victimes
+- **location**: localisation de l'accident
+- une colonne vide à supprimer  qui contenait les drapeaux 
+- **pic**: colonne vide à supprimer qui contenait initialement une image
+- **cat**: catégorie de l'accident 
 
 
 ```
