@@ -25,7 +25,7 @@ Cette fonction prend en argument un lien (provenant de la fonction `toutes_les_p
 
 Cette fonction renvoie pour une année donnée une liste de tous les urls des accidents. Elle récupère les urls donnés par la fonction `page_par_année`.
 
-Par exemple: L'année 1945 contient 15 pages d'accidents. On récupère le lien de la première page par la fonction `page_principale(annee)`. A partir de ce lien la fonction `toutes_les_pages_par_annee(year)` va récupérer les lioens des 14 autres pages d'accidents pour les mettre dans la même liste. Pour chaque page d'accidents, la fonction `page_par_annee(Li)` va récupérer tous les urls renvoyant à chaque accident individuellement.
+**Par exemple** : L'année 1945 contient 15 pages d'accidents. On récupère le lien de la première page par la fonction `page_principale(annee)`. A partir de ce lien la fonction `toutes_les_pages_par_annee(year)` va récupérer les lioens des 14 autres pages d'accidents pour les mettre dans la même liste. Pour chaque page d'accidents, la fonction `page_par_annee(Li)` va récupérer tous les urls renvoyant à chaque accident individuellement.
 Enfin la fonction `liste_page_par_annee(annee)` rassemble tous ces liens. 
 
 
