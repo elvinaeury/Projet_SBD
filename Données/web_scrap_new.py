@@ -109,8 +109,7 @@ def donnees_par_accident(url):
               'Engines:', 'Total airframe hrs:', 'First flight:',   'Cycles:', 'Crew:', 'Passengers:', 'Ground casualties:', 
             'Collision casualties:', 'Aircraft damage:',  'Aircraft fate:', 'Location:', 'Phase:', 'Nature:', 'Departure airport:', 
             'Destination airport:', 'Flightnumber:', 'Probable cause:', 'Total:']
-        
-        
+       
     
     d = { k:v for k,v in dico.items() if k in cles}
 
@@ -132,7 +131,6 @@ def donnees_par_annee(annee):
             donnees.append(donnee)
             if j%39 == 0:
                 time.sleep(delay)
-    #time.sleep(delay)
 
     return donnees 
 
@@ -146,7 +144,6 @@ def lien_a_enlever():
 def fichier_csv(annee):
     data_annee = donnees_par_annee(annee)
     #data_total = donnees(URL)
-     #data_annee = donnees_par_accident('https://aviation-safety.net/database/record.php?id=19941126-1')
     delays = [7, 4, 6, 5, 2, 10, 9, 12, 13]
     delay = np.random.choice(delays)
     
@@ -164,77 +161,5 @@ def fichier_csv(annee):
                 time.sleep(delay)
             else: pass
         
-        
-        
-        
-        
-        
-        
-        
-#probleme annee 2011   57   , 58 ,59  "AttributeError: 'NoneType' object has no attribute 'findAll'"
-   #         probleme annee 1940, 1941 (35, 36, 37), 1942 (32,33,34,35), 2009
-        # https://aviation-safety.net/database/record.php?id=19410403-0
-        #https://aviation-safety.net/database/record.php?id=19410404-0
-        #https://aviation-safety.net/database/record.php?id=19410407    you are the issue !!!!!  il n'y a absolument rien sur cette page 
-        
-"""     
-   1940: derniere page 52 ?
-   1941:  https://aviation-safety.net/database/record.php?id=19410407
-   1942: 32,33,34,35
-   1944
-   1970       45 
-        
-        
-        
-      """
 
 
-"""
-2012 66 de la premiere ou deuxieme page ?
-2010   70 premiere page ?
-1969 55 ?
-1970    45 parmi premieres pages
-
-1964  [1,63
-
-
-
-2000
-2002
-"""
-
-# try:
-#      fichier_csv(2012)
-# except AttributeError:
-#      pass
-
-
-"""
-
-https://aviation-safety.net/database/record.php?id=19691206          1969 soucis       0,55    
-
-'https://aviation-safety.net/database/record.php?id=19400409'         1940             0,16      3,55
-
-'https://aviation-safety.net/database/record.php?id=19420208'     1942               1,33
-
- """      
-     
-""" 
-  File "<ipython-input-25-3de89db07d96>", line 1, in <module>
-    fichier_csv(1940)
-
-  File "/Users/Nadia/Documents/Maths/DATA_SCIENCES/PROJET_SQL/web_scrapping/sanstitre1.py", line 133, in fichier_csv
-
-  File "/Users/Nadia/Documents/Maths/DATA_SCIENCES/PROJET_SQL/web_scrapping/sanstitre1.py", line 120, in donnees_par_annee
-
-  File "/Users/Nadia/Documents/Maths/DATA_SCIENCES/PROJET_SQL/web_scrapping/sanstitre1.py", line 93, in donnees_par_accident
-
-AttributeError: 'NoneType' object has no attribute 'findAll'
-
-
-def lien_a_enlever():
-    l = liste_page_par_annee(1944)
-    return l
-
-
- """
