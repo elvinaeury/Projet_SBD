@@ -24,7 +24,7 @@ def page_principale(annee):
    return(f'https://aviation-safety.net/database/dblist.php?Year={annee}')
 ```
 
-Cette fonction renvoie juste le lien de la premiere page d'accidents: un lien comme celui ci ['https://aviation-safety.net/database/dblist.php?Year=2020']
+Cette fonction renvoie juste le lien de la premiere page d'accidents: un lien comme [celui ci](https://aviation-safety.net/database/dblist.php?Year=2020)
 
 #### La fonction `toutes_les_pages_par_annee(year)`
 
