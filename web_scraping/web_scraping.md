@@ -177,6 +177,31 @@ Cette fonction n'est utile que rarement: quand certaines pages web ne fonctionne
 Cette fonction prend en argument une année. C'est la fonction qui va permettre l'écriture du fichier csv 
 On y utilise la fonction `csv.DictWriter`
 
+```python
+def fichier_csv(annee):
+    data_annee = donnees_par_annee(annee)
+    #data_total = donnees(URL)
+     #data_annee = donnees_par_accident('https://aviation-safety.net/database/record.php?id=19941126-1')
+    delays = [7, 4, 6, 5, 2, 10, 9, 12, 13]
+    delay = np.random.choice(delays)
+    
+    with open(f'/Users/Nadia/Documents/Maths/DATA_SCIENCES/PROJET_SQL/web_scrapping/bonnes_donnees2/data_{annee}.csv', 'w', newline='') as csvfile:
+        fieldnames = ['Identifiant:', 'Status:', 'Date:', 'Time:', 'Type:', 'Operator:','Operating for:', 'On behalf of:', 'Leased from:', 'Registration:', 'C/n / msn:', 'First flight:', 
+            'Total airframe hrs:', 'Year built:',  'Engines:', 'Cycles:', 'Crew:', 'Passengers:', 'Ground casualties:', 
+            'Collision casualties:','Aircraft damage:', 'Aircraft fate:', 'Location:', 'Phase:', 'Nature:', 'Departure airport:', 
+            'Destination airport:', 'Flightnumber:', 'Probable cause:', 'Total:']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        writer.writeheader()
+        for j in range(len(data_annee)):
+            writer.writerow(data_annee[j])
+            if j%55 == 0:
+                time.sleep(delay)
+            else: pass
+            
+```
+
+
 ## script python: web_scrapping_record.py
 
 Ce fichier python sert à récupérer plusieurs fichiers csv par année donnant les informations générales sur les accidents.
