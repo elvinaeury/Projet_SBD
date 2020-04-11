@@ -19,6 +19,11 @@ Ce fichier python sert à récupérer plusieurs fichiers csv par année donnant 
 
 #### La fonction `page_principale(annee)` 
 
+```python
+def page_principale(annee):
+   return(f'https://aviation-safety.net/database/dblist.php?Year={annee}')
+```
+
 Cette fonction renvoie juste le lien de la premiere page d'accidents: un lien comme celui ci ['https://aviation-safety.net/database/dblist.php?Year=2020']
 
 #### La fonction `toutes_les_pages_par_annee(year)`
@@ -75,3 +80,7 @@ permet l'écriture des fichiers csv par année, ici c'est beaucoup plus simple e
 
 Un fichier avec tous les documents csv.
 Une ligne contient tout d'abord 
+
+## Difficultés rencontrées
+
+Nous avons rencontré plusieurs difficultés 
