@@ -107,6 +107,29 @@ Enfin la fonction `liste_page_par_annee(annee)`rassemble tous ces liens.
 #### La fonction `donnees_par_accident(url)` 
 
 C'est la fonction qui va récupérer nos données. 
+Voici un extrait d'un exemple de page html, pour mieux comprendre la structure:
+```html
+<tr>
+    <td class="caption">Date:</td>
+    <td class="caption">Sunday 9 February 2020</td>
+</tr>
+<tr>
+    <td class="caption">Time:</td><td class="desc">12:20</td></tr> 
+<tr>
+    <td class="caption" valign="bottom">Type:</td>
+    <td class="desc"><img src="//cdn.aviation-safety.net/graphics/ICAOtype/B735.gif" width="200" alt="Silhouette image of generic B735 model" title="Silhouette image of generic B735 model" /><br />
+        <a href="/database/types/Boeing-737-500/index">Boeing 737-524 (WL)</a>
+    </td>
+</tr>
+<tr>
+    <td class="caption">Operator:</td>
+    <td class="desc">
+        <a href="/database/operator/airline.php?var=12263">Utair</a>
+    </td>
+</tr>
+```
+
+
 On a choisi de donner une structure de dictionnaire pour plusieurs raisons: 
 - C'est ce qui se prêtait le mieux à la page html qui nous était fournie. 
 - On peut prendre les différentes clés qui nous intéressent 
@@ -157,7 +180,7 @@ On y utilise la fonction `csv.DictWriter`
 Ce fichier python sert à récupérer plusieurs fichiers csv par année donnant les informations générales sur les accidents.
 
 
-#### les fonctions `page_princpale(annee)` et `toutes_les_pages_par_annee(year)`ne changent pas du précédent script
+#### les fonctions `page_princpale(annee)` et `toutes_les_pages_par_annee(year)` ne changent pas du précédent script
 
 #### la fonction `liens_par_annee` 
 Renvoie  une liste de listes des données générales des accidents. En effet ici la structure de liste s'y prête bien car la structure des données est toujours la même pour chaque année et accident. On a les mêmes clés dans le même ordre à chaque fois. Par conséquent la procédure sera  beaucoup plus rapide. 
