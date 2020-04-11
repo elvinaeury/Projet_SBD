@@ -28,16 +28,77 @@ Cette fonction renvoie juste le lien de la premiere page d'accidents: un lien co
 
 #### La fonction `toutes_les_pages_par_annee(year)`
 
+```python
+def toutes_les_pages_par_annee(year):
+    url = page_principale(year)
+    reponse = requests.get(url,headers={'User-Agent': 'Wget/1.20.3 (linux-gnu)'})
+    annee = [url]   
+    
+    if reponse.ok:
+        soup = BeautifulSoup(reponse.text, 'lxml')
+        spans = soup.findAll('div', {'class':'pagenumbers'}) 
+        
+        for span in spans:
+            les_as = span.findAll('a')
+            
+            for a in les_as:
+                link = a['href']
+                annee.append('https://aviation-safety.net/database/dblist.php' + str(link))
+    annee = list(set(annee))
+    return annee
+    
+ ```
+
+
 Cette fonction renvoie comme son nom l'indique une liste des toutes les pages d'accidents par année. En effet certaines années comportent plusieurs pages d'accident comme en 1945 (pendant la seconde Guerre Mondiale) où on a 15 pages d'accidents. (Il y a 100 accidents par page). Il est donc question de récupérer tous les liens et les mettre dans la même liste.
 
 #### La fonction `page_par_annee(Li)`
 
 Cette fonction prend en argument un lien (provenant de la fonction `toutes_les_pages_par_annee`) donc un lien d'une page où plusieurs accidents sont référencés. Et cette fonction va récuperer tous les urls envoyant à chaque page d'accident
 
+```python
+
+def page_par_annee(Li):
+    reponse = requests.get(Li,headers={'User-Agent': 'Wget/1.20.3 (linux-gnu)'})
+    links = []
+    
+    if reponse.ok:
+        soup = BeautifulSoup(reponse.text, 'lxml') 
+        trs = soup.findAll('tr')
+        
+        for tr in trs:
+            a = tr.find('a')
+            link = a['href']
+            links.append('https://aviation-safety.net'+ str(link))
+
+           
+    motif = re.compile('(.*record.php.*)')
+    L = []
+    
+    for link in links:
+        if len(motif.findall(str(link))) != 0:
+            L.append(motif.findall(str(link))[0])
+        else: pass
+    
+    return L
+ ```
+
 
 #### La fonction `liste_page_par_annee(annee)` 
 
 Cette fonction renvoie pour une année donnée une liste de tous les urls des accidents. Elle récupère les urls donnés par la fonction `page_par_année`.
+
+```python
+Cette fonction renvoie pour une année donnée une liste de tous les urls des accidents. Elle récupère les urls donnés par la fonction `page_par_année`.def liste_page_par_annee(annee):
+    L = toutes_les_pages_par_annee(annee)
+    links = []
+    
+    for i in range(len(L)):      
+        l = page_par_annee(L[i])
+        links.append(l)
+    
+    return links  
+ ```
 
 **Par exemple** : L'année 1945 contient 15 pages d'accidents. On récupère le lien de la première page par la fonction `page_principale(annee)`. A partir de ce lien la fonction `toutes_les_pages_par_annee(year)` va récupérer les liens des 14 autres pages d'accidents pour les mettre dans la même liste. Pour chaque page d'accidents, la fonction `page_par_annee(Li)` va récupérer tous les urls renvoyant à chaque accident individuellement.
 Enfin la fonction `liste_page_par_annee(annee)`rassemble tous ces liens. 
@@ -49,8 +110,37 @@ C'est la fonction qui va récupérer nos données.
 On a choisi de donner une structure de dictionnaire pour plusieurs raisons: 
 - C'est ce qui se prêtait le mieux à la page html qui nous était fournie. 
 - On peut prendre les différentes clés qui nous intéressent 
+- les mêmes clés n'étaient pas toujours référencées dans les pages et pas toujours dans le même ordre, il était donc difficile de songer à utiliser des listes
 
+```python
+def donnees_par_accident(url):
+    dico = {}
+    reponse = requests.get(url,headers={'User-Agent': 'Wget/1.20.3 (linux-gnu)'})
+     
+    if reponse.ok:
+        
+        soup = BeautifulSoup(reponse.text, 'lxml')
+        table = soup.find('table')
+        trs = table.findAll('tr')
+        motif = re.compile('\d+.*')     
+        identifiant = motif.findall(url)
+        dico['Identifiant:'] = identifiant[0]
+    
+        for tr in trs:
+            td = tr.findAll('td')
+            cle = td[0]
+            valeur = td[1]     
+            dico[cle.text] = valeur.text
+            
+    cles = ['Identifiant:','Status:', 'Date:', 'Time:', 'Type:', 'Operator:','Operating for:', 'On behalf of:', 'Leased from:', 'Registration:', 'C/n / msn:', 'Year built:',
+              'Engines:', 'Total airframe hrs:', 'First flight:',   'Cycles:', 'Crew:', 'Passengers:', 'Ground casualties:', 
+            'Collision casualties:', 'Aircraft damage:',  'Aircraft fate:', 'Location:', 'Phase:', 'Nature:', 'Departure airport:', 
+            'Destination airport:', 'Flightnumber:', 'Probable cause:', 'Total:']       
+    
+    d = { k:v for k,v in dico.items() if k in cles}
 
+    return d
+```
 
 #### la fonction `lien_a_enlever()` 
 
@@ -73,7 +163,7 @@ Ce fichier python sert à récupérer plusieurs fichiers csv par année donnant 
 Renvoie  une liste de listes des données générales des accidents 
 
 
-#### la fonction fichier_csv 
+#### la fonction `fichier_csv`
 permet l'écriture des fichiers csv par année, ici c'est beaucoup plus simple et rapide que précedemment notamment car l'utilisation des listes est plus rapide à écrire
 
 ### fichier de données record2
