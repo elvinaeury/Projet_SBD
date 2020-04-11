@@ -89,7 +89,7 @@ def page_par_annee(Li):
 Cette fonction renvoie pour une année donnée une liste de tous les urls des accidents. Elle récupère les urls donnés par la fonction `page_par_année`.
 
 ```python
-Cette fonction renvoie pour une année donnée une liste de tous les urls des accidents. Elle récupère les urls donnés par la fonction `page_par_année`.def liste_page_par_annee(annee):
+def liste_page_par_annee(annee):
     L = toutes_les_pages_par_annee(annee)
     links = []
     
