@@ -160,11 +160,46 @@ Ce fichier python sert à récupérer plusieurs fichiers csv par année donnant 
 #### les fonctions `page_princpale(annee)` et `toutes_les_pages_par_annee(year)`ne changent pas du précédent script
 
 #### la fonction `liens_par_annee` 
-Renvoie  une liste de listes des données générales des accidents 
+Renvoie  une liste de listes des données générales des accidents. En effet ici la structure de liste s'y prête bien car la structure des données est toujours la même pour chaque année et accident. On a les mêmes clés dans le même ordre à chaque fois. Par conséquent la procédure sera  beaucoup plus rapide. 
 
+```python
+def liens_par_annee(Li):
+    reponse = requests.get(Li,headers={'User-Agent': 'Wget/1.20.3 (linux-gnu)'})
+    soup = BeautifulSoup(reponse.text, 'lxml')
+    table = soup.find("table")
+    output_rows = []
+    
+    for table_row in table.findAll('tr'):
+        a = table_row.find('a')
+        link = a['href']
+        columns = table_row.findAll('td')
+        motif = re.compile('\d+.*')     
+        identifiant = motif.findall(link)
+        output_row = []
+        try:
+            output_row.append(identifiant[0])
+        except IndexError:
+            pass
+        
+        for column in columns:
+            output_row.append(column.text)
+        output_rows.append(output_row)
+        
+    return output_rows
+
+```
 
 #### la fonction `fichier_csv`
 permet l'écriture des fichiers csv par année, ici c'est beaucoup plus simple et rapide que précedemment notamment car l'utilisation des listes est plus rapide à écrire
+
+```python
+def fichier_csv(annee):
+    output_rows = liens_pages_par_annee(annee)
+    with open(f'/Users/Nadia/Documents/Maths/DATA_SCIENCES/PROJET_SQL/web_scrapping/record2/data_{annee}.csv', 'w') as csvfile:
+          writer = csv.writer(csvfile)
+          writer.writerow(["identifiant","date","type","registration","operator","fat.","location"," ", "pic","cat"])
+          writer.writerows(output_rows)
+```
 
 ### fichier de données record2
 
