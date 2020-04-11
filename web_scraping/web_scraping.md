@@ -1,6 +1,13 @@
 #  Explication processus web scraping 
 
+## Introduction
 
+
+On voulait récupérer les données du site Aviation Safety qui nous semblait très complet. Cependant celui ci ne proposait pas de dataset à télécharger comme nous avions l'habitude de trouver. 
+On a donc réalisé des recherches pour trouver un moyen de récupérer ces données.
+
+Nous avons donc découvert la notion de web scraping.
+Nous la réalisons sur python grâce aux modules `BeautifulSoup` et `requests` notamment.
 
 
 
