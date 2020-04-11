@@ -204,8 +204,31 @@ def fichier_csv(annee):
 
 Ce fichier python sert à récupérer plusieurs fichiers csv par année donnant les informations générales sur les accidents.
 
-
-#### les fonctions `page_princpale(annee)` et `toutes_les_pages_par_annee(year)` ne changent pas du précédent script
+```html
+<tr>
+   <td class="list"><nobr><a href="/database/record.php?id=19720105-1">05-JAN-1972</a></nobr></td>
+   <td class="list"><NOBR>Douglas C-47B (DC-3)</NOBR></td>
+   <td class="list">CF-KAH</td>
+   <td class="list">McKenzie Air</td>
+   <td class="listdata"></td>
+   <td class="list">Norman Wells...</td>
+   <td class="list"><img src="//cdn.aviation-safety.net/database/country/flags_15/C.gif" title="Canada" /></td>
+   <td class="list">&nbsp;</td>
+   <td class="list">U1</td>
+</tr>
+<tr>
+   <td class="list"><nobr><a href="/database/record.php?id=19720106-0">06-JAN-1972</a></nobr></td>
+   <td class="list"><NOBR>Hawker Siddeley HS-748</NOBR></td>
+   <td class="list">XA-SEV</td>
+   <td class="list">SAESA</td>
+   <td class="listdata">23</td>
+   <td class="list">near Chetumal</td>
+   <td class="list"><img src="//cdn.aviation-safety.net/database/country/flags_15/XA.gif" title="Mexico" /></td>
+   <td class="list">&nbsp;</td>
+   <td class="list">A1</td>
+</tr>
+```
+#### les fonctions `page_principale(annee)` et `toutes_les_pages_par_annee(year)` ne changent pas du précédent script
 
 #### la fonction `liens_par_annee` 
 Renvoie  une liste de listes des données générales des accidents. En effet ici la structure de liste s'y prête bien car la structure des données est toujours la même pour chaque année et accident. On a les mêmes clés dans le même ordre à chaque fois. Par conséquent la procédure sera  beaucoup plus rapide. 
