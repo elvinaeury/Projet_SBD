@@ -180,8 +180,6 @@ On y utilise la fonction `csv.DictWriter`
 ```python
 def fichier_csv(annee):
     data_annee = donnees_par_annee(annee)
-    #data_total = donnees(URL)
-     #data_annee = donnees_par_accident('https://aviation-safety.net/database/record.php?id=19941126-1')
     delays = [7, 4, 6, 5, 2, 10, 9, 12, 13]
     delay = np.random.choice(delays)
     
