@@ -114,7 +114,9 @@ Voici un extrait d'un exemple de page html, pour mieux comprendre la structure:
     <td class="caption">Sunday 9 February 2020</td>
 </tr>
 <tr>
-    <td class="caption">Time:</td><td class="desc">12:20</td></tr> 
+    <td class="caption">Time:</td>
+   <td class="desc">12:20</td>
+</tr> 
 <tr>
     <td class="caption" valign="bottom">Type:</td>
     <td class="desc"><img src="//cdn.aviation-safety.net/graphics/ICAOtype/B735.gif" width="200" alt="Silhouette image of generic B735 model" title="Silhouette image of generic B735 model" /><br />
