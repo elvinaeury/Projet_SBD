@@ -174,8 +174,8 @@ Cette fonction n'est utile que rarement: quand certaines pages web ne fonctionne
 
 #### La fonction `fichier_csv(annee)`
 
-Cette fonction prend en argument une année. C'est la fonction qui va permettre l'écriture du fichier csv 
-On y utilise la fonction `csv.DictWriter`
+Cette fonction prend en argument une année. C'est la fonction qui va permettre l'écriture du fichier csv par année.
+On y utilise la fonction `csv.DictWriter` qui permet de remplir le csv avec en donnée un dictonnaire. Va coller les clés par rapport à fieldnames pour avoir le bon ordre.
 
 ```python
 def fichier_csv(annee):
