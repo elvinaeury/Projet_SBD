@@ -63,3 +63,29 @@ C'est un fichier texte qui donne des informations sur les différents aéroports
 | Tz databae time zone | Timezone in "tz" (Olson) format, eg. "America/Los_Angeles". |
 | Type | dans ce document  des types airports ( *donc à enlever ?*) |
 | Source | source des données ( *à enlever*) |
+
+
+```
+- données venant du site web [Aviation safety](https://aviation-safety.net/database/) récupérées  (avec clé primaire)
+
+```
+Status:,Date:,Time:,Type:,Operator:,Leased from:,Registration:,C/n / msn:,First flight:,Total airframe hrs:,Year built:,Engines:,Cycles:,Crew:,Passengers:,Ground casualties:,Collision casualties:,Aircraft damage:,Aircraft fate:,Location:,Phase:,Nature:,Departure airport:,Destination airport:,Flightnumber:,Probable cause:,Total:
+Preliminary,Monday 2 January 2017,,Reims Cessna F406 Caravan II,Air Excel,, 5H-WOW, F406-0060, 1991,,,,,Fatalities: 0 / Occupants: 1,Fatalities: 0 / Occupants: 5,,, Substantial,,"Sasakwa Airstrip (   Tanzania) ", Unknown (UNK),Passenger,?,?,,,Fatalities: 0 / Occupants: 6 
+Preliminary,Monday 2 January 2017,12:20,Let L-410UVP,Doren Air Congo,, 9Q-CZR, 851336, 1985,,,,,Fatalities: 0 / Occupants: 2,Fatalities: 0 / Occupants: 0,,, Substantial,,"Shabunda Airport (   Democratic Republic of the Congo) 
+", Landing (LDG),Cargo,"Bukavu-Kavumu Airport (BKY/FZMA), Democratic Republic of the Congo","Shabunda Airport (FZMW), Democratic Republic of the Congo",,,Fatalities: 0 / Occupants: 2 
+Preliminary - official,Monday 2 January 2017,16:43,Hawker 800XP,Pinnacle Air Charter,, N910JD, 258420, 1999,,, 2 Honeywell TFE731-SER,,Fatalities: 0 / Occupants: 2,Fatalities: 0 / Occupants: 0,,, Substantial,,"Scottsdale Airport, AZ (SCF) (   United States of America) 
+", Landing (LDG),Private,"Tucson International Airport, AZ (TUS/KTUS), United States of America","Scottsdale Airport, AZ (SCF/KSDL), United States of America",,,Fatalities: 0 / Occupants: 2 
+
+
+```
+- autre format de données provenant également du site web [Aviation safety](https://aviation-safety.net/database/) (avec clé primaire)
+
+
+```
+date,type,registration,operator,fat.,location, ,pic,cat
+03-JAN-2014,Boeing 737-8H4 (WL),N8327A,Southwest Airlines,0,Las Vegas-Mc...,, ,A2
+05-JAN-2014,Boeing 767-3W0ER,HS-BKE,"Orient Thai Airlines, op.for Saudi Arabian",0,Madinah-Moha...,, ,A2
+05-JAN-2014,Canadair Challenger 601-3R,N115WF,Vineland Corporation,1,Aspen-Pitkin...,,,A1
+05-JAN-2014,Airbus A320-231,VT-ESH,Air India,0,Jaipur Inter...,,,A1
+07-JAN-2014,Fokker 50,C5-SSA,South Supreme Airlines,0,Aweil Airport,, ,A2
+```

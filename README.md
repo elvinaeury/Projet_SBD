@@ -1,115 +1,87 @@
-# Projet_SBD
+# PROJET_SGBD
 
+Bienvenue sur ce dépôt git consacré au projet universitaire de notre cours de [bases de données relationnelles](https://math.univ-angers.fr/~ducrot/bddr/) du Master 1 Data Science de l'Université d'Angers. 
 
-
-Composition du trinôme: 
-* Destin ASHUZA CIRUMANGA
-* Nadia GHERNAOUT
-* Elvina GOVENDASAMY
-
-Le sujet:
-**Incidents d'avions à travers le monde.**
+Ce projet est réalisé par : 
+* [Destin ASHUZA CIRUMANGA](https://github.com/dest-ash)
+* [Nadia GHERNAOUT](https://github.com/nadatum)
+* [Elvina GOVENDASAMY](https://github.com/elvinaeury)
 
 ## Table of contents
+* [Cahier des charges](#cahier-des-charges)
+* [Sujet d'étude](#sujet-d-etude)
+* [Progression du travail](#progression-du-travail)
 * [TO-DO list](#to-do-list)
-* [Requêtes à lancer](#requêtes-à-lancer)
-* [Partie visualisation](#partie-visualisation)
-* [Données](#données)
+
+## Cachier des charges
+L'énoncé précis du projet, son contexte de réalisation ainsi que les différentes contraintes à respecter sont définis de manière détaillée sur le [site de la formation](https://math.univ-angers.fr/~jaclin/2020ds1/evalDS1bdd/2020/2020/2020.html). 
+
+Dans cette section, nous en faisons juste un bref récapitulatif.
+
+### Données mises à disposition
+Différentes sources de donées  liés au traffic aérien :
+https://www.data.gouv.fr/en/datasets/donnees-despace-aerien-de-la-base-aeronautique-du-sia/ ,
+https://openflights.org/data.html ,
+https://aviation-safety.net/database/ , 
+https://www.ntsb.gov/_layouts/ntsb.aviation/index.aspx ,
+https://www.transtats.bts.gov/databases.asp?Mode_ID=1&Mode_Desc=Aviation&Subject_ID2=0
+
+### Objectif
+Définir un sujet d'études à partir de ces données et réaliser une application web qui servira d'interface utilisateur à tout internaute souhaitant intéragir avec les données en fonction du sujet retenu
+
+### A réaliser 
+* Concevoir et peupler une base de données multi-tables sous formes normales
+* Concevoir l'application web
+
+### Contraintes 
+Utilisation du SGBD postegreSQL et du framework Django, consignation en temps réel de l'avancement du travail sur github.
+
+## Sujet d'étude 
+Nous avons retenu comme sujet l'étude des **Incidents d'avions à travers le monde.**
+Concrétement, nous allons concevoir une base de données et une application permettant de l'interroger aux travers des requêtes telles ques :
+- Quels sont les endroits où il y a le plus d’accidents/ incidents (entre certaines dates)
+- Afficher les types d'accidents ou incidents ayant fait le plus de blessés/morts
+- Donner un aéroport de départ et les incidents qui qui se sont passés et leur distance par rapport à cet aéroport (si possible) et des caractéristiques sur ces accidents 
+- Combien d'accidents par année ? (puis graphique)
+- liste des accidents :
+  - par année
+  - par type d'avion
+  - par localisation
+- Pendant quelle phase de vol est survenu l'incident : landing ? take-off ? during flight ?
+- Et toute autre requête qui sera possible à partir des données disponibles
+
+Les résultats seront rendus sous un format de visualisation adéquat et agréable.
+
+## Etat d'avancement du projet
+
+### Données :
+Toutes les données nécessaires au projet ont été récupérées, nettoyées et mises sous une forme exploitable.
+
+Les données brutes sont décrites dans le fichier [donnees.md](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/donnees.md) (accessible au clic) et se retrouvent dans le répertoire [donnees](https://github.com/elvinaeury/Projet_SBD/tree/master/donnees). Elles ont été récupérées en partie par [web_scraping](https://github.com/elvinaeury/Projet_SBD/tree/master/web_scraping) et la procédure est décrite via le fichier [web_scraping.md](https://github.com/elvinaeury/Projet_SBD/blob/master/web_scraping/web_scraping.md)
+
+Quant aux données traitées, elles se retrouvent dans le dossier [nettoyage](https://github.com/elvinaeury/Projet_SBD/tree/master/nettoyage) dont la description est faite dans [nettoya.md](https://github.com/elvinaeury/Projet_SBD/blob/master/nettoyage/nettoyage.md)
+
+### Description des fichiers
+Comme pour les données, tous les fichiers de ce dépôt sont  répartis dans des différents dossiers et chaque dossier contient un fichier **.md** qui décrit son contenu. En cliquant sur le nom d'un dossier ou d'un fichier mentionné sur cette page, vous accédez directement à la ressource concernée.
+
+Les programmes réalisés et les fonctionalités à venir seront décrits de la même manière.
+
+### Etat de la base des données
+Le modèle des données conçu sous postgreSQL et décrit dans le fichier [modele_relationnel/descriptif_modele_relationnel_final.md](https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/description_modele_relationnel_final.md) a été réalisé et peuplé avec succès via [Django](https://github.com/elvinaeury/Projet_SBD/tree/master/Django) et les détails sont à retrouver dans le fichier [description_dossier_django.md](https://github.com/elvinaeury/Projet_SBD/blob/master/Django/description_dossier_django.md)
 
 ## TO-DO List
 
 - [x] Choisir toutes les données et les récuperer
-- [ ] Remplir le GitHub public avec plus de renseignements pour les profs
-- [x] Créer un [modèle relationnel](https://github.com/elvinaeury/projet_test/blob/master/modele_relationnel/description_modele_relationnel.md) une fois que toutes les données ont été récupérées
+- [x] Remplir le GitHub public avec plus de renseignements pour les profs
+- [x] Créer un [modèle relationnel](https://github.com/elvinaeury/Projet_SBD/tree/master/modele_relationnel)
 - [x] Se renseigner sur le web scrapping (avec module `beautiful-soup`)
 - [x] [Web Scrapping](https://github.com/elvinaeury/projet_test/blob/master/Web_scrapping/web.md)
 - [x] Nettoyer les données récupérées
-
-
-
-## Requêtes à lancer
-- Quels sont les endroits où il y a le plus d’accidents/ incidents (entre des certaines dates)
-- Afficher quels types d'accides ou incidents ont fait le plus de blessés/morts
-- Donner un aéroport de départ et les incidents qui qui se sont passés et leur distance par rapport à cet aéroport et des caractéristiques sur ces accidents 
-- Combien d'accidents par année ? (puis graphique)
-- liste des accidents par :
-  - par année
-  - par type d'avion
-  - par localisation
-- landing ? take-off ? during flight ?
-
-
-
-### Partie visualisation
-
-
-## Données
-
-- le fichier **AviationData.txt** est un fichier texte qui donne les incidents et accidents d'avions (separateur: '|')
-
-Event Id | Investigation Type | Accident Number | Event Date | Location | Country | Latitude | Longitude | Airport Code | Airport Name | Injury Severity | Aircraft Damage | Aircraft Category | Registration Number | Make | Model | Amateur Built | Number of Engines | Engine Type | FAR Description | Schedule | Purpose of Flight | Air Carrier | Total Fatal Injuries | Total Serious Injuries | Total Minor Injuries | Total Uninjured | Weather Condition | Broad Phase of Flight | Report Status | Publication Date |
-
-```
-Event Id | Investigation Type | Accident Number | Event Date | Location | Country | Latitude | Longitude | Airport Code | Airport Name | Injury Severity | Aircraft Damage | Aircraft Category | Registration Number | Make | Model | Amateur Built | Number of Engines | Engine Type | FAR Description | Schedule | Purpose of Flight | Air Carrier | Total Fatal Injuries | Total Serious Injuries | Total Minor Injuries | Total Uninjured | Weather Condition | Broad Phase of Flight | Report Status | Publication Date | 
-20200222X95241 | Accident | WPR20CA093 | 02/22/2020 | Columbia, CA | United States | 38.030556 | -120.414444 | O22 |  | Non-Fatal | Substantial | Airplane | N462 | Aviat | A1 | No | 1 |  | Part 91: General Aviation |  | Personal |  |  |  | 1 |  |  |  | Preliminary | 02/25/2020 | 
-20200222X62353 | Accident | CEN20FA096 | 02/22/2020 | Rogers, MN | United States | 45.198055 | -93.652778 |  | N/A | Fatal(1) | Destroyed | Airplane | N3266Q | Beech | A36 | No | 1 | Reciprocating | Part 91: General Aviation |  | Personal |  | 1 |  |  |  | VMC | MANEUVERING | Preliminary | 02/26/2020 | 
-20200220X10054 | Accident | CEN20FA093 | 02/20/2020 | Coleman, TX | United States | 32.050833 | -99.570000 |  | N/A | Fatal(3) | Destroyed | Airplane | N860J | Beech | 200 | No |  |  | Part 91: General Aviation |  | Personal |  | 3 |  |  |  | IMC | CRUISE | Preliminary | 02/26/2020 | 
-20200219X80403 | Accident | WPR20CA092 | 02/18/2020 | Colexico, CA | United States |  |  |  |  | Unavailable | Substantial |  | N288NS | Bell | OH 58A | No |  |  | Part 137: Agricultural |  | Aerial Application |  |  |  |  |  |  |  | Preliminary | 02/21/2020 | 
-```
-
-*Attention pas mal de données manquantes on dirait.*
-
-- le fichier **airports.dat.txt** est un fichier texte qui donne des informations sur les différents aéroports localisation .. pas directement en lien avec les incidents mais peut être pratique
-
-| données       | explications    |   
-| :------------ | --------------: |
-| Airport ID    |     Unique OpenFlights identifier for this airport. |    
-| Name          | Name of airport.| 
-|  City         | Main city served by airport |    
-| Country | Country or territory where airport is located. |
-| IATA | géocode à trois lettre décrivant des aéroport |
-| ICAO |  code ICAO  | 
-| Latitude | Decimal degrees, usually to six significant digits. Negative is South, positive is North. |
-| Longitude | Decimal degrees, usually to six significant digits. Negative is West, positive is East. |
-| Altitude | In feet  |
-| Timezone | Hours offset from UTC. Fractional hours are expressed as decimals, eg. India is 5.5. |
-| DST | Daylight savings time. One of E (Europe), A (US/Canada), S (South America), O (Australia), Z (New Zealand), N (None) or U (Unknown). |
-| Tz databae time zone | Timezone in "tz" (Olson) format, eg. "America/Los_Angeles". |
-| Type | dans ce document  des types airports ( *donc à enlever ?*) |
-| Source | source des données ( *à enlever*) |
-
-```
-1,"Goroka Airport","Goroka","Papua New Guinea","GKA","AYGA",-6.081689834590001,145.391998291,5282,10,"U","Pacific/Port_Moresby","airport","OurAirports"
-2,"Madang Airport","Madang","Papua New Guinea","MAG","AYMD",-5.20707988739,145.789001465,20,10,"U","Pacific/Port_Moresby","airport","OurAirports"
-3,"Mount Hagen Kagamuga Airport","Mount Hagen","Papua New Guinea","HGU","AYMH",-5.826789855957031,144.29600524902344,5388,10,"U","Pacific/Port_Moresby","airport","OurAirports"
-4,"Nadzab Airport","Nadzab","Papua New Guinea","LAE","AYNZ",-6.569803,146.725977,239,10,"U","Pacific/Port_Moresby","airport","OurAirports"
-5,"Port Moresby Jacksons International Airport","Port Moresby","Papua New Guinea","POM","AYPY",-9.443380355834961,147.22000122070312,146,10,"U","Pacific/Port_Moresby","airport","OurAirports"
-```
-- données venant du site web [Aviation safety](https://aviation-safety.net/database/) récupérées  (avec clé primaire)
-
-```
-Status:,Date:,Time:,Type:,Operator:,Leased from:,Registration:,C/n / msn:,First flight:,Total airframe hrs:,Year built:,Engines:,Cycles:,Crew:,Passengers:,Ground casualties:,Collision casualties:,Aircraft damage:,Aircraft fate:,Location:,Phase:,Nature:,Departure airport:,Destination airport:,Flightnumber:,Probable cause:,Total:
-Preliminary,Monday 2 January 2017,,Reims Cessna F406 Caravan II,Air Excel,, 5H-WOW, F406-0060, 1991,,,,,Fatalities: 0 / Occupants: 1,Fatalities: 0 / Occupants: 5,,, Substantial,,"Sasakwa Airstrip (   Tanzania) ", Unknown (UNK),Passenger,?,?,,,Fatalities: 0 / Occupants: 6 
-Preliminary,Monday 2 January 2017,12:20,Let L-410UVP,Doren Air Congo,, 9Q-CZR, 851336, 1985,,,,,Fatalities: 0 / Occupants: 2,Fatalities: 0 / Occupants: 0,,, Substantial,,"Shabunda Airport (   Democratic Republic of the Congo) 
-", Landing (LDG),Cargo,"Bukavu-Kavumu Airport (BKY/FZMA), Democratic Republic of the Congo","Shabunda Airport (FZMW), Democratic Republic of the Congo",,,Fatalities: 0 / Occupants: 2 
-Preliminary - official,Monday 2 January 2017,16:43,Hawker 800XP,Pinnacle Air Charter,, N910JD, 258420, 1999,,, 2 Honeywell TFE731-SER,,Fatalities: 0 / Occupants: 2,Fatalities: 0 / Occupants: 0,,, Substantial,,"Scottsdale Airport, AZ (SCF) (   United States of America) 
-", Landing (LDG),Private,"Tucson International Airport, AZ (TUS/KTUS), United States of America","Scottsdale Airport, AZ (SCF/KSDL), United States of America",,,Fatalities: 0 / Occupants: 2 
-
-
-
-```
-- autre format de données provenant également du site web [Aviation safety](https://aviation-safety.net/database/) (avec clé primaire)
-
-
-```
-date,type,registration,operator,fat.,location, ,pic,cat
-03-JAN-2014,Boeing 737-8H4 (WL),N8327A,Southwest Airlines,0,Las Vegas-Mc...,, ,A2
-05-JAN-2014,Boeing 767-3W0ER,HS-BKE,"Orient Thai Airlines, op.for Saudi Arabian",0,Madinah-Moha...,, ,A2
-05-JAN-2014,Canadair Challenger 601-3R,N115WF,Vineland Corporation,1,Aspen-Pitkin...,,,A1
-05-JAN-2014,Airbus A320-231,VT-ESH,Air India,0,Jaipur Inter...,,,A1
-07-JAN-2014,Fokker 50,C5-SSA,South Supreme Airlines,0,Aweil Airport,, ,A2
-```
-
-
-
-
+- [x] Création du projet django[DjangoAviation](https://github.com/elvinaeury/Projet_SBD/tree/master/Django/DjangoAviation), de l'application [appliweb](https://github.com/elvinaeury/Projet_SBD/tree/master/Django/DjangoAviation/appliweb) et peuplement de la base de données.
+- [ ] Jouer les scripts django et de peuplement sur le serveur de l'université également
+- [ ] Commencer la partie framework
+- [ ] Créer les vues et templates correspondant aux requêtes envisagées
+- [ ] Etudier l'aspect visualisation et présentation des requêtes (css, html, graphiques, imagages, etc)
+- [ ] Tester l'utlisation du timestamp pour les champs date et time
+- [ ] Finaliser l'application et régler les derniers points.
+- [ ] Bonus : Faire de l'analyse des données (datamining) et des stats si le temps et les donnees le permettent et créer des vues correspondantes
