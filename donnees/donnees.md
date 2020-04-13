@@ -1,5 +1,17 @@
 # Descriptif des données 
 
+## Fichier de données traitees [données traitées](https://github.com/elvinaeury/Projet_SBD/blob/master/nettoyage/donnees_traitees.zip) 
+
+
+ ```
+ identifiant,week_day,date,time,type_event,phase,location,country,total_occupants,total_fatalities,aircraft_damage,aircraft_fate,type_aircraft,number_engines,type_engines,first_flight,cycles,total_airframe_hours,registration,c_n_msn,operator,nature,flight_number,departure_airport_name,departure_airport_IATA,departure_airport_ICAO,departure_airport_country,destination_airport_name,destination_airport_IATA,destination_airport_ICAO,destination_airport_country,crew_number,passengers_number,crew_fatalities,passengers_fatalities,collision_casualties,ground_casualties,status
+ 20200102-0,Thursday,02-JAN-2020,-,A1, Unknown (UNK),5 km (3.1 mls) from  Geneina Airport (EGN),Sudan,18,18, Damaged beyond repair,-,Antonov An-12A,-,-,1962,-,-, -, 2340606,Sudan AF,Military,-,Geneina Airport,EGN,HSCN,Sudan,Khartoum-Civil Airport,KRT,HSSS,Sudan,7,11,7,11,-,-,-
+ 20200103-0,Friday,03-JAN-2020,09:15,A1, En route (ENR),near Haputale,Sri Lanka,4,4, Damaged beyond repair,-,Harbin Yunshuji Y-12 II,-,-,1990,-,-, SCL-857, 0021,Sri Lanka AF,Military,-,Wirawila Airport,WRZ,VCCW,Sri Lanka,Colombo-Ratmalana Airport,RML,VCCC,Sri Lanka,4,0,4,0,-,-,-
+ 20200105-0,Sunday,05-JAN-2020,-,C1, Taxi (TXI),Manda Bay-Camp Simba Air Base,Kenya,3,2, Destroyed, Written off (damaged beyond repair),Beechcraft B300 King Air 350,-,-,-,-,-, registration unknown,-,L3 Technologies,Military,-,-,-,-,-,-,-,-,-,3,0,2,0,-,-,-
+ 20200108-0,Wednesday,08-JAN-2020,06:18,C1, En route (ENR),near Sabashahr,Iran,176,176, Destroyed, Written off (damaged beyond repair),Boeing 737-8KV (WL),2,CFMI CFM56-7B24E,2016,-,-, UR-PSR, 38124/5977,Ukraine International Airlines,International Scheduled Passenger,PS752,Tehran-Imam Khomeini International Airport,IKA,OIIE,Iran,Kiev-Borispol Airport,KBP,UKBB,Ukraine,9,167,9,167,-,-,-
+ 20200109-0,Thursday,09-JAN-2020,-,A1, Landing (LDG),Goma Airport (GOM),Democratic Republic of the Congo,67,0, Substantial, Written off (damaged beyond repair),Lockheed C-130BZ Hercules,-,-,1962,-,-, 403, 3750,South African AF,Military,-,Beni Airport,BNC,FZNP,Democratic Republic of the Congo,Goma Airport,GOM,FZNA,Democratic Republic of the Congo,8,59,0,0,-,-,-
+ ```
+
 ## Fichier de données [record2.zip](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/record2.zip)
 
 Un dossier comportant tous les csv par année. Obtenu par webScraping du site [Aviation Safety](https://aviation-safety.net/database/)
@@ -112,7 +124,7 @@ C'est un fichier texte qui donne des informations sur les différents aéroports
 | Source | source des données ( *à enlever*) |
 
 
-```
+
 - données venant du site web [Aviation safety](https://aviation-safety.net/database/) récupérées  (avec clé primaire)
 
 ```
