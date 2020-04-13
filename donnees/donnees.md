@@ -40,12 +40,31 @@ identifiant,date,type,registration,operator,fat.,location, ,pic,cat
  - **Type**: type d'avion, nom
  - **Operator**: compagnie aérienne
  - **On behalf of**: en cas de location, quelle compagnie aérienne a prêté l'avion.
-
-
+ - **Leased from**: Propriétaire de l'avion, mais ne l'utilisant pas au moment de l'accident.
+ - **Registration**:
+ - **C/n / msn**: Numéro de série / numéro de construction du fabricant.
  - **First Flight**: année de premier vol
  - **Total airframe hrs**:
  - **Year built**:
  - **Engines**:
+ - **Total airframe hrs**: Nombre total d'heures de vol au moment de l'accident.
+ - **Year built**: année de construction (jamais référencé donc à enlever)
+ - **Engines**: Nombre et type (modèle et marque) de moteurs.
+ - **Cycles**: Nombre total de décollages et d'atterrissages au moment de l'accident.
+ - **Crew:** nombre de décès sur nombre d'équipage
+ - **Passengers**: nombre de décès sur nombre de passagers
+ - **Ground casualties**: nombre de victimes au sol
+ - **Collision casualties**: nombre de victimes dû à une collision
+ - **Aircraft damage**: Décrit les dommages à l'avion à la suite de l'événement.
+ - **Aircraft fate**:
+ - **Location**: localisation de l'accident 
+ - **Phase**: phase de vol 
+ - **Nature**: nature du vol (militaire...)
+ - **Departure airport**: aéroport de départ
+ - **Destination airport**: aéroport de destination
+ - **Flightnumber**: numéro de vol
+ - **Probable cause**: on ne l'a pas récupéré au final donc colonne vide
+ - **Total**: nombre total de victimes
  ```
  Identifiant:,Status:,Date:,Time:,Type:,Operator:,Operating for:,On behalf of:,Leased from:,Registration:,C/n / msn:,First flight:,Total airframe hrs:,Year built:,Engines:,Cycles:,Crew:,Passengers:,Ground casualties:,Collision casualties:,Aircraft damage:,Aircraft fate:,Location:,Phase:,Nature:,Departure airport:,Destination airport:,Flightnumber:,Probable cause:,Total:
  20200102-0,,Thursday 2 January 2020,,Antonov An-12A,Al Quwwat al-Jawwiya As-Sudaniya (Sudanese Air Force),,,, -, 2340606, 1962,,,,,Fatalities: 7 / Occupants: 7,Fatalities: 11 / Occupants: 11,,, Damaged beyond repair,,"5 km (3.1 mls) from  Geneina Airport (EGN) Sudan) ", Unknown (UNK),Military,"Geneina Airport (EGN/HSCN), Sudan","Khartoum-Civil Airport (KRT/HSSS), Sudan",,,Fatalities: 18 / Occupants: 18 
