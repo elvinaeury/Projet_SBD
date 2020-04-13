@@ -15,7 +15,7 @@ Vous trouverez [ici](https://github.com/elvinaeury/Projet_SBD/blob/master/nettoy
 
 ## Fichier de données [record2.zip](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/record2.zip)
 
-Un dossier comportant tous les csv par année. Obtenu par webScraping du site [Aviation Safety](https://aviation-safety.net/database/)
+Un dossier comportant tous les csv par année. Obtenu par webScraping du site [Aviation Safety](https://aviation-safety.net/database/) (explication [ici](https://github.com/elvinaeury/Projet_SBD/blob/master/web_scraping/web_scraping.md))
 
 Ce sont les données brutes avant nettoyage obtenues grâce au deuxieme web scraping récupérant les données générales sur les accidents. Nous avons toutefois crée un identifiant pour pouvoir croiser nos deux jeux de données (obtenus par web scraping). 
 
@@ -44,7 +44,7 @@ identifiant,date,type,registration,operator,fat.,location, ,pic,cat
 
 ##  Fichier de données [bonnes_donnees2.zip](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/bonnes_donnees2.zip)
 
- Ce sont les données brutes avant nettoyage obtenues grâce au premier web scraping récupérant des données plus précises sur les accidents.
+ Ce sont les données brutes avant nettoyage obtenues grâce au premier web scraping (explication [ici](https://github.com/elvinaeury/Projet_SBD/blob/master/web_scraping/web_scraping.md) )récupérant des données plus précises sur les accidents.
 
  - **un identifiant**: unique obtenu à partir de l'url de la page d'accident permettra de croiser les données 
  - **Status**: Statut des informations. Final: rapport d'enquête final officiel. Préliminaire - Officiel: rapport d'enquête préliminaire officiel. Préliminaire: informations de presse et d'autres informations non officielles 
