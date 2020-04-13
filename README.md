@@ -10,10 +10,10 @@ Ce projet est réalisé par :
 ## Table of contents
 * [Cahier des charges](#cahier-des-charges)
 * [Sujet d'étude](#sujet-d-etude)
-* [Progression du travail](#progression-du-travail)
+* [Progression du travail](#etat-d-avancement-du-projet)
 * [TO-DO list](#to-do-list)
 
-## Cachier des charges
+## Cahier des charges
 L'énoncé précis du projet, son contexte de réalisation ainsi que les différentes contraintes à respecter sont définis de manière détaillée sur le [site de la formation](https://math.univ-angers.fr/~jaclin/2020ds1/evalDS1bdd/2020/2020/2020.html). 
 
 Dans cette section, nous en faisons juste un bref récapitulatif.
