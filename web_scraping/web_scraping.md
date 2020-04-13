@@ -174,8 +174,8 @@ Cette fonction n'est utile que rarement: quand certaines pages web ne fonctionne
 
 #### La fonction `fichier_csv(annee)`
 
-Cette fonction prend en argument une année. C'est la fonction qui va permettre l'écriture du fichier csv 
-On y utilise la fonction `csv.DictWriter`
+Cette fonction prend en argument une année. C'est la fonction qui va permettre l'écriture du fichier csv par année.
+On y utilise la fonction `csv.DictWriter` qui permet de remplir le csv avec en donnée un dictonnaire. Va coller les clés par rapport à fieldnames pour avoir le bon ordre.
 
 ```python
 def fichier_csv(annee):
@@ -279,4 +279,6 @@ Une ligne contient tout d'abord
 
 ## Difficultés rencontrées
 
-Nous avons rencontré plusieurs difficultés 
+Nous avons rencontré plusieurs difficultés :
+- site bloqué après plusieurs requêtes d'où l'utilisation de la fonction `time.sleep` qui permet d'espacer les requêtes avec un temps de pause.
+- le site ne supportait pas python, il faut donc changer le client de la fonction `requests`. (cf Explication de Mr Charbonnel dans le forum).
