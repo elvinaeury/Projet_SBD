@@ -59,7 +59,7 @@ Toutes les données nécessaires au projet ont été récupérées, nettoyées e
 
 Les données brutes sont décrites dans le fichier [donnees.md](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/donnees.md) (accessible au clic) et se retrouvent dans le répertoire [donnees](https://github.com/elvinaeury/Projet_SBD/tree/master/donnees). Elles ont été récupérées en partie par [web_scraping](https://github.com/elvinaeury/Projet_SBD/tree/master/web_scraping) et la procédure est décrite via le fichier [web_scraping.md](https://github.com/elvinaeury/Projet_SBD/blob/master/web_scraping/web_scraping.md)
 
-Quant aux données traitées, elles se retrouvent dans le dossier [nettoyage](https://github.com/elvinaeury/Projet_SBD/tree/master/nettoyage) dont la description est faite dans [nettoya.md](https://github.com/elvinaeury/Projet_SBD/blob/master/nettoyage/nettoyage.md)
+Quant aux données traitées, elles se retrouvent dans le dossier [nettoyage](https://github.com/elvinaeury/Projet_SBD/tree/master/nettoyage) dont la description est faite dans [nettoyage.md](https://github.com/elvinaeury/Projet_SBD/blob/master/nettoyage/nettoyage.md)
 
 ### Description des fichiers
 Comme pour les données, tous les fichiers de ce dépôt sont  répartis dans des différents dossiers et chaque dossier contient un fichier **.md** qui décrit son contenu. En cliquant sur le nom d'un dossier ou d'un fichier mentionné sur cette page, vous accédez directement à la ressource concernée.
