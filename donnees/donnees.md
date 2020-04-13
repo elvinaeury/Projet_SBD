@@ -2,6 +2,7 @@
 
 ## Fichier de données traitees [données traitées](https://github.com/elvinaeury/Projet_SBD/blob/master/nettoyage/donnees_traitees.zip) 
 
+Vous trouverez [ici](https://github.com/elvinaeury/Projet_SBD/blob/master/nettoyage/nettoyage.md) le dossier expliquant le nettoyage des données.
 
  ```
  identifiant,week_day,date,time,type_event,phase,location,country,total_occupants,total_fatalities,aircraft_damage,aircraft_fate,type_aircraft,number_engines,type_engines,first_flight,cycles,total_airframe_hours,registration,c_n_msn,operator,nature,flight_number,departure_airport_name,departure_airport_IATA,departure_airport_ICAO,departure_airport_country,destination_airport_name,destination_airport_IATA,destination_airport_ICAO,destination_airport_country,crew_number,passengers_number,crew_fatalities,passengers_fatalities,collision_casualties,ground_casualties,status
