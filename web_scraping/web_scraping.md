@@ -13,7 +13,7 @@ Nous la réalisons sur python grâce aux modules `BeautifulSoup` et `requests` n
 
 
 
-## script python: web_scrap_new.py
+## script python: [web_scrap_new.py](https://github.com/elvinaeury/Projet_SBD/blob/master/web_scraping/web_scrap_new.py)
 
 Ce fichier python sert à récupérer plusieurs fichiers csv par année donnant des informations plus précises sur les accidents.
 
@@ -200,7 +200,7 @@ def fichier_csv(annee):
 ```
 
 
-## script python: web_scrapping_record.py
+## script python: [web_scrapping_record.py](https://github.com/elvinaeury/Projet_SBD/blob/master/web_scraping/web_scrapping_record.py)
 
 Ce fichier python sert à récupérer plusieurs fichiers csv par année donnant les informations générales sur les accidents.
 
@@ -272,7 +272,7 @@ def fichier_csv(annee):
           writer.writerows(output_rows)
 ```
 
-### fichier de données record2
+### fichier de données [record2](https://github.com/elvinaeury/Projet_SBD/blob/master/web_scraping/record2.zip)
 
 Un fichier avec tous les documents csv.
 Une ligne contient tout d'abord 

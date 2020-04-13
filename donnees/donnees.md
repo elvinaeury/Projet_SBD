@@ -1,8 +1,8 @@
 # Descriptif des données 
 
-## Fichier de données record2.zip
+## Fichier de données [record2.zip](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/record2.zip)
 
-Un dossier comportant tous les csv par année. Obtenu par webScraping du site [Aviation Safety]('https://aviation-safety.net/database/')
+Un dossier comportant tous les csv par année. Obtenu par webScraping du site [Aviation Safety](https://aviation-safety.net/database/)
 
 Ce sont les données brutes avant nettoyage obtenues grâce au deuxieme web scraping récupérant les données générales sur les accidents. Nous avons toutefois crée un identifiant pour pouvoir croiser nos deux jeux de données (obtenus par web scraping). 
 
@@ -29,7 +29,7 @@ identifiant,date,type,registration,operator,fat.,location, ,pic,cat
 
 ```
 
-## le fichier **AviationData.txt** 
+## le fichier [AviationData.txt](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/AviationData.txt)
 C'est un fichier texte qui donne les incidents et accidents d'avions (separateur: '|')
 
 Event Id | Investigation Type | Accident Number | Event Date | Location | Country | Latitude | Longitude | Airport Code | Airport Name | Injury Severity | Aircraft Damage | Aircraft Category | Registration Number | Make | Model | Amateur Built | Number of Engines | Engine Type | FAR Description | Schedule | Purpose of Flight | Air Carrier | Total Fatal Injuries | Total Serious Injuries | Total Minor Injuries | Total Uninjured | Weather Condition | Broad Phase of Flight | Report Status | Publication Date |
@@ -44,7 +44,7 @@ Event Id | Investigation Type | Accident Number | Event Date | Location | Countr
 
 *Attention pas mal de données manquantes on dirait.*
 
-## le fichier **airports.dat.txt** 
+## le fichier [airports.dat.txt](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/airports.dat.txt) 
 C'est un fichier texte qui donne des informations sur les différents aéroports localisation .. peut être utile pour la table aéroport! et contient les différents codes IATA ICAO utiles pour identifier les aéroports
 
 | données       | explications    |   
