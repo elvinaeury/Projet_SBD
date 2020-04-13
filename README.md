@@ -20,11 +20,11 @@ Dans cette section, nous en faisons juste un bref récapitulatif.
 
 ### Données mises à disposition
 Différentes sources de donées  liés au traffic aérien :
-- https://www.data.gouv.fr/en/datasets/donnees-despace-aerien-de-la-base-aeronautique-du-sia/ ,
-- https://openflights.org/data.html ,
-- https://aviation-safety.net/database/ , 
-- https://www.ntsb.gov/_layouts/ntsb.aviation/index.aspx ,
-- https://www.transtats.bts.gov/databases.asp?Mode_ID=1&Mode_Desc=Aviation&Subject_ID2=0
+https://www.data.gouv.fr/en/datasets/donnees-despace-aerien-de-la-base-aeronautique-du-sia/ ,
+https://openflights.org/data.html ,
+https://aviation-safety.net/database/ , 
+https://www.ntsb.gov/_layouts/ntsb.aviation/index.aspx ,
+https://www.transtats.bts.gov/databases.asp?Mode_ID=1&Mode_Desc=Aviation&Subject_ID2=0
 
 ### Objectif
 Définir un sujet d'études à partir de ces données et réaliser une application web qui servira d'interface utilisateur à tout internaute souhaitant intéragir avec les données en fonction du sujet retenu
@@ -59,7 +59,7 @@ Toutes les données nécessaires au projet ont été récupérées, nettoyées e
 
 Les données brutes sont décrites dans le fichier [donnees.md](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/donnees.md) (accessible au clic) et se retrouvent dans le répertoire [donnees](https://github.com/elvinaeury/Projet_SBD/tree/master/donnees). Elles ont été récupérées en partie par [web_scraping](https://github.com/elvinaeury/Projet_SBD/tree/master/web_scraping) et la procédure est décrite via le fichier [web_scraping.md](https://github.com/elvinaeury/Projet_SBD/blob/master/web_scraping/web_scraping.md)
 
-Quant aux données traitées, elles se retrouvent dans le dossier [nettoyage](https://github.com/elvinaeury/Projet_SBD/tree/master/nettoyage) dont la description est faite dans [nettoyage.md](https://github.com/elvinaeury/Projet_SBD/blob/master/nettoyage/nettoyage.md)
+Quant aux données traitées, elles se retrouvent dans le dossier [nettoyage](https://github.com/elvinaeury/Projet_SBD/tree/master/nettoyage) dont la description est faite dans [nettoya.md](https://github.com/elvinaeury/Projet_SBD/blob/master/nettoyage/nettoyage.md)
 
 ### Description des fichiers
 Comme pour les données, tous les fichiers de ce dépôt sont  répartis dans des différents dossiers et chaque dossier contient un fichier **.md** qui décrit son contenu. En cliquant sur le nom d'un dossier ou d'un fichier mentionné sur cette page, vous accédez directement à la ressource concernée.
@@ -67,23 +67,7 @@ Comme pour les données, tous les fichiers de ce dépôt sont  répartis dans de
 Les programmes réalisés et les fonctionalités à venir seront décrits de la même manière.
 
 ### Etat de la base des données
-
 Le modèle des données conçu sous postgreSQL et décrit dans le fichier [modele_relationnel/descriptif_modele_relationnel_final.md](https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/description_modele_relationnel_final.md) a été réalisé et peuplé avec succès via [Django](https://github.com/elvinaeury/Projet_SBD/tree/master/Django) et les détails sont à retrouver dans le fichier [description_dossier_django.md](https://github.com/elvinaeury/Projet_SBD/blob/master/Django/description_dossier_django.md)
-<<<<<<< HEAD
-=======
-
-### Données
-
-Vous trouverez [ici](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/donnees.md) un descriptif complet et détaillé de nos données 
-
-- Le fichier **AviationData.txt** est un fichier texte qui donne les incidents et accidents d'avions (separateur: '|') provenant de ce [site](https://www.ntsb.gov/_layouts/ntsb.aviation/index.aspx)
-
-- Le fichier **airports.dat.txt** est un fichier texte qui donne des informations sur les différents aéroports localisation .. proventant de ce [site](https://openflights.org/data.html).  
-
-- Des données détaillées venant du site web [Aviation safety](https://aviation-safety.net/database/) récupérées  (avec identifiant)
-
-- Un autre format de données plus générales provenant également du site web [Aviation safety](https://aviation-safety.net/database/) (avec identifiant)
->>>>>>> fea14b63ae214e0f295fd5eaac0d26a109339f29
 
 ## TO-DO List
 
