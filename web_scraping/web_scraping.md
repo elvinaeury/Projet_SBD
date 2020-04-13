@@ -279,4 +279,6 @@ Une ligne contient tout d'abord
 
 ## Difficultés rencontrées
 
-Nous avons rencontré plusieurs difficultés 
+Nous avons rencontré plusieurs difficultés :
+- site bloqué après plusieurs requêtes d'où l'utilisation de la fonction `time.sleep` qui permet d'espacer les requêtes avec un temps de pause.
+- le site ne supportait pas python, il faut donc changer le client de la fonction `requests`. (cf Explication de Mr Charbonnel dans le forum).
