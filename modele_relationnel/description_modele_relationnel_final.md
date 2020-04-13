@@ -8,12 +8,8 @@
 * [airports](#airports)
 * [departure_airport](#departure_airport)
 * [destination_airport](#destination_airpot)
-<<<<<<< HEAD
-Un schéma des tables est dispoonible sous format png ([modele_final.png](https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/modele_final.png)) ou sous format pdf ([modele_final.pdf](https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/modele_final.pdf)). Le script [script_modele_final.sql](https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/script_modele_final.sql) peut créer ces tables pour un chargement déstiné au SGBDR postgres
-=======
 
-Un schéma des tables est dispoonible sous format png ([modele_final.png]('https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/modele_final.png')) ou sous format pdf ([modele_final.pdf](#https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/modele_final.pdf)). Le script [script_modele_final.sql](#https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/script_modele_final.sql) peut créer ces tables pour un chargement déstiné au SGBDR postgres
->>>>>>> 4634309d43800b5dd092561daed62827491ef7ad
+Un schéma des tables est dispoonible sous format png ([modele_final.png](https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/modele_final.png)) ou sous format pdf ([modele_final.pdf](https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/modele_final.pdf)). Le script [script_modele_final.sql](https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/script_modele_final.sql) peut créer ces tables pour un chargement déstiné au SGBDR postgres
 
 ## accidents_events
 Décrit l'accident :
