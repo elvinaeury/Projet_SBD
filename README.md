@@ -75,9 +75,9 @@ Le modèle des données conçu sous postgreSQL et décrit dans le fichier [model
 
 Vous trouverez [ici](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/donnees.md) un descriptif complet et détaillé de nos données 
 
-- Le fichier **AviationData.txt** est un fichier texte qui donne les incidents et accidents d'avions (separateur: '|')
+- Le fichier **AviationData.txt** est un fichier texte qui donne les incidents et accidents d'avions (separateur: '|') provenant de ce [site](https://www.ntsb.gov/_layouts/ntsb.aviation/index.aspx)
 
-- Le fichier **airports.dat.txt** est un fichier texte qui donne des informations sur les différents aéroports localisation .. pas directement en lien avec les incidents mais peut être pratique
+- Le fichier **airports.dat.txt** est un fichier texte qui donne des informations sur les différents aéroports localisation .. proventant de ce [site](https://openflights.org/data.html).  
 
 - Des données détaillées venant du site web [Aviation safety](https://aviation-safety.net/database/) récupérées  (avec identifiant)
 
