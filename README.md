@@ -77,11 +77,11 @@ Le modèle des données conçu sous postgreSQL et décrit dans le fichier [model
 - [x] Se renseigner sur le web scrapping (avec module `beautiful-soup`)
 - [x] [Web Scrapping](https://github.com/elvinaeury/projet_test/blob/master/Web_scrapping/web.md)
 - [x] Nettoyer les données récupérées
-- [x] Création du projet django[DjangoAviation](https://github.com/elvinaeury/Projet_SBD/tree/master/Django/DjangoAviation), de l'application [appliweb](https://github.com/elvinaeury/Projet_SBD/tree/master/Django/DjangoAviation/appliweb) et peuplement de la base de données.
+- [x] Création du projet django [DjangoAviation](https://github.com/elvinaeury/Projet_SBD/tree/master/Django/DjangoAviation), de l'application [appliweb](https://github.com/elvinaeury/Projet_SBD/tree/master/Django/DjangoAviation/appliweb) et peuplement de la base de données.
 - [ ] Jouer les scripts django et de peuplement sur le serveur de l'université également
 - [ ] Commencer la partie framework
 - [ ] Créer les vues et templates correspondant aux requêtes envisagées
-- [ ] Etudier l'aspect visualisation et présentation des requêtes (css, html, graphiques, imagages, etc)
+- [ ] Etudier l'aspect visualisation et présentation des requêtes (css, html, graphiques, images, etc)
 - [ ] Tester l'utlisation du timestamp pour les champs date et time
 - [ ] Finaliser l'application et régler les derniers points.
-- [ ] Bonus : Faire de l'analyse des données (datamining) et des stats si le temps et les donnees le permettent et créer des vues correspondantes
+- [ ] Bonus : Faire de l'analyse des données (datamining) et des stats si le temps et les données le permettent et créer des vues correspondantes
