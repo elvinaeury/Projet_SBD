@@ -19,7 +19,7 @@ L'énoncé précis du projet, son contexte de réalisation ainsi que les différ
 Dans cette section, nous en faisons juste un bref récapitulatif.
 
 ### Données mises à disposition
-Différentes sources de donées  liés au traffic aérien :
+Différentes sources de données  liées au traffic aérien :
 - https://www.data.gouv.fr/en/datasets/donnees-despace-aerien-de-la-base-aeronautique-du-sia/ ,
 - https://openflights.org/data.html ,
 - https://aviation-safety.net/database/ , 
@@ -27,7 +27,7 @@ Différentes sources de donées  liés au traffic aérien :
 - https://www.transtats.bts.gov/databases.asp?Mode_ID=1&Mode_Desc=Aviation&Subject_ID2=0
 
 ### Objectif
-Définir un sujet d'études à partir de ces données et réaliser une application web qui servira d'interface utilisateur à tout internaute souhaitant intéragir avec les données en fonction du sujet retenu
+Définir un sujet d'études à partir de ces données et réaliser une application web qui servira d'interface utilisateur à tout internaute souhaitant intéragir avec les données en fonction du sujet retenu.
 
 ### A réaliser 
 * Concevoir et peupler une base de données multi-tables sous formes normales
