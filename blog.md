@@ -18,3 +18,5 @@ Load des données dans les tables
 Ajout du modèle relationnel sur ce repository
 ### 13/04/2020
 Ajout du dossier relatif au processus de nettoyage et contenant les données nettoyées
+### 13/04/2020
+Ajout du dossier django avec partie ORM réalisée
