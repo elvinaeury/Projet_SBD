@@ -29,6 +29,34 @@ identifiant,date,type,registration,operator,fat.,location, ,pic,cat
 
 ```
 
+##  Fichier de données [bonnes_donnees2.zip](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/bonnes_donnees2.zip)
+
+ Ce sont les données brutes avant nettoyage obtenues grâce au premier web scraping récupérant des données plus précises sur les accidents.
+
+ - **un identifiant**: unique obtenu à partir de l'url de la page d'accident permettra de croiser les données 
+ - **Status**: Statut des informations. Final: rapport d'enquête final officiel. Préliminaire - Officiel: rapport d'enquête préliminaire officiel. Préliminaire: informations de presse et d'autres informations non officielles 
+ - **Date**: date de l'accident
+ - **Time**: heure de l'accident
+ - **Type**: type d'avion, nom
+ - **Operator**: compagnie aérienne
+ - **On behalf of**: en cas de location, quelle compagnie aérienne a prêté l'avion.
+
+
+ - **First Flight**: année de premier vol
+ - **Total airframe hrs**:
+ - **Year built**:
+ - **Engines**:
+ ```
+ Identifiant:,Status:,Date:,Time:,Type:,Operator:,Operating for:,On behalf of:,Leased from:,Registration:,C/n / msn:,First flight:,Total airframe hrs:,Year built:,Engines:,Cycles:,Crew:,Passengers:,Ground casualties:,Collision casualties:,Aircraft damage:,Aircraft fate:,Location:,Phase:,Nature:,Departure airport:,Destination airport:,Flightnumber:,Probable cause:,Total:
+ 20200102-0,,Thursday 2 January 2020,,Antonov An-12A,Al Quwwat al-Jawwiya As-Sudaniya (Sudanese Air Force),,,, -, 2340606, 1962,,,,,Fatalities: 7 / Occupants: 7,Fatalities: 11 / Occupants: 11,,, Damaged beyond repair,,"5 km (3.1 mls) from  Geneina Airport (EGN) Sudan) ", Unknown (UNK),Military,"Geneina Airport (EGN/HSCN), Sudan","Khartoum-Civil Airport (KRT/HSSS), Sudan",,,Fatalities: 18 / Occupants: 18 
+ 20200103-0,,Friday 3 January 2020,09:15,Harbin Yunshuji Y-12 II,Sri Lanka Air Force,,,, SCL-857, 0021, 1990,,,,,Fatalities: 4 / Occupants: 4,Fatalities: 0 / Occupants: 0,,, Damaged beyond repair,,"near Haputale (   Sri Lanka) ", En route (ENR),Military,"Wirawila Airport (WRZ/VCCW), Sri Lanka","Colombo-Ratmalana Airport (RML/VCCC), Sri Lanka",,,Fatalities: 4 / Occupants: 4 
+ 20200105-0,,Sunday 5 January 2020,,Beechcraft B300 King Air 350,L3 Technologies,,,, registration unknown, , ,,,,,Fatalities: 2 / Occupants: 3,Fatalities: 0 / Occupants: 0,,, Destroyed, Written off (damaged beyond repair),"Manda Bay-Camp Simba Air Base (   Kenya) ", Taxi (TXI),Military,?,?,,,Fatalities: 2 / Occupants: 3 
+ 20200108-0,,Wednesday 8 January 2020,06:18,Boeing 737-8KV (WL),Ukraine International Airlines,,,, UR-PSR, 38124/5977, 2016-06-21  (3 years 7 months),,, 2 CFMI CFM56-7B24E,,Fatalities: 9 / Occupants: 9,Fatalities: 167 / Occupants: 167,,, Destroyed, Written off (damaged beyond repair),"near Sabashahr (   Iran) ", En route (ENR),International Scheduled Passenger,"Tehran-Imam Khomeini International Airport (IKA/OIIE), Iran","Kiev-Borispol Airport (KBP/UKBB), Ukraine",PS752,,Fatalities: 176 / Occupants: 176 
+ 20200109-0,,Thursday 9 January 2020,,Lockheed C-130BZ Hercules,South African Air Force - SAAF,,,, 403, 3750, 1962,,,,,Fatalities: 0 / Occupants: 8,Fatalities: 0 / Occupants: 59,,, Substantial, Written off (damaged beyond repair),"Goma Airport (GOM) (Democratic Republic of the Congo) ", Landing (LDG),Military,"Beni Airport (BNC/FZNP), Democratic Republic of the Congo","Goma Airport (GOM/FZNA), Democratic Republic of the Congo",,,Fatalities: 0 / Occupants: 67 
+ ```
+
+
+
 ## le fichier [AviationData.txt](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/AviationData.txt)
 C'est un fichier texte qui donne les incidents et accidents d'avions (separateur: '|')
 
