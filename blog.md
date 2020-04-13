@@ -14,4 +14,5 @@ Création des tables et schémas
 Nettoyage des données
 ### 02/04/2020 
 Load des données dans les tables
-
+### 13/04/2020
+Ajout du modèle relationnel sur ce repository
