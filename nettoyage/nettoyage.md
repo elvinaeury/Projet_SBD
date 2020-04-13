@@ -8,4 +8,4 @@ Ce dossier contient les fichiers de données nettoyées et ceux relatifs au proc
 * fichier [nettoyage2.ipynb](https://github.com/elvinaeury/Projet_SBD/blob/master/nettoyage/nettoyage2.ipynb) : pareil que le notebook précédent mais sur le format de notre dernier jeu de données brutes (avec moins de détails qui sont les mêmes que ceux du notebook précédent)
 * fichier [nettoyage2_generalise.py](https://github.com/elvinaeury/Projet_SBD/blob/master/nettoyage/nettoyage2_generalise.py) : généralise l'ensemble des opérations de nettoyage et de mise en forme développées dans le dernier notebook
 
-Pour ce nettoyage, nous avons utilisés notamment pandas et les expressions régulières du module re de python
+Pour ce nettoyage, nous avons utilisés notamment `pandas` et les expressions régulières du module `re` de python

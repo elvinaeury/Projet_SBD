@@ -52,6 +52,7 @@ Concrétement, nous allons concevoir une base de données et une application per
 
 Les résultats seront rendus sous un format de visualisation adéquat et agréable.
 
+<<<<<<< HEAD
 ## Etat d'avancement du projet
 
 ### Données :
@@ -68,6 +69,17 @@ Les programmes réalisés et les fonctionalités à venir seront décrits de la 
 
 ### Etat de la base des données
 Le modèle des données conçu sous postgreSQL et décrit dans le fichier [modele_relationnel/descriptif_modele_relationnel_final.md](https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/description_modele_relationnel_final.md) a été réalisé et peuplé avec succès via [Django](https://github.com/elvinaeury/Projet_SBD/tree/master/Django) et les détails sont à retrouver dans le fichier [description_dossier_django.md](https://github.com/elvinaeury/Projet_SBD/blob/master/Django/description_dossier_django.md)
+=======
+Vous trouverez [ici](https://github.com/elvinaeury/Projet_SBD/blob/master/donnees/donnees.md) un descriptif complet et détaillé de nos données 
+
+- Le fichier **AviationData.txt** est un fichier texte qui donne les incidents et accidents d'avions (separateur: '|')
+
+- Le fichier **airports.dat.txt** est un fichier texte qui donne des informations sur les différents aéroports localisation .. pas directement en lien avec les incidents mais peut être pratique
+
+- Des données détaillées venant du site web [Aviation safety](https://aviation-safety.net/database/) récupérées  (avec identifiant)
+
+- Un autre format de données plus générales provenant également du site web [Aviation safety](https://aviation-safety.net/database/) (avec identifiant)
+>>>>>>> 9661e89c836037e8fbeecfcd0ac6aaeae21ce5b2
 
 ## TO-DO List
 
