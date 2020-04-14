@@ -9,7 +9,7 @@ import csv
 
 lignes_problematiques = []
 indice = 0
-with open("../../airports.dat.txt", encoding="utf-8") as csvfile :
+with open("../../donnees/airports.dat.txt", encoding="utf-8") as csvfile :
     f = csv.reader(csvfile)
     for liste in f :
         indice += 1
