@@ -20,3 +20,5 @@ Ajout du modèle relationnel sur ce repository
 Ajout du dossier relatif au processus de nettoyage et contenant les données nettoyées
 ### 13/04/2020
 Ajout du dossier django avec partie ORM réalisée
+### 14/04/2020
+Exécution des scripts django, création et peuplement des tables sur le serveur postgres de l'université
