@@ -1,0 +1,65 @@
+<!-- fichier accidents.tmpl --> 
+<html>
+<head> 
+  <title> Table accidents events -</title>
+  <style>   
+    table.mon_tableau  {
+        border-collapse: collapse;
+    }
+    table.mon_tableau td {
+       border: 1px solid #5555;
+       padding: 0.3em;
+       font-family: "Sans-serif";
+       font-size: 12px;
+    }
+    table.mon_tableau tr:nth-child(even)  {background: #EEE}
+    table.mon_tableau tr:nth-child(odd) {background: #FFF}
+    td.titre {color : blue; background : lightgrey;}
+  </style>
+</head>
+
+<body> 
+
+ <!-- <h1> Format de présentation : id - identifiant - jour - date - heure - type - phase - localisation - pays - personnes à bord - victimes - dégats appareil - sort appareil </h1> -->
+
+{% if rien %}
+  Aucun accident enregistré
+{% else %}
+  <p>{{ nb }} accident(s) enregistré(s) dans la base de données </p>
+  <table class="mon_tableau">
+  <tr>
+      <td class="titre"> id  </td>
+      <td class="titre"> Identifiant </td>
+      <td class="titre"> Jour  </td>
+      <td class="titre"> Date </td>
+      <td class="titre"> Heure </td>
+      <td class="titre"> Type accident </td>
+      <td class="titre"> Phase </td>
+      <td class="titre"> Localisation </td>
+      <td class="titre"> Pays </td>
+      <td class="titre"> Personnes à bord </td>
+      <td class="titre"> Victimes </td>
+      <td class="titre"> Dégats appareil </td>
+      <td class="titre"> Sort appareil </td>
+    </tr>
+  {% for a in accidents %}
+    <tr>
+      <td>{{ a.id }} </td>
+      <td>{{ a.identifiant }} </td>
+      <td>{% ifnotequal None a.week_day %} {{ a.week_day }} {% else %} {% endifnotequal %}</td>
+      <td>{{ a.date }} </td>
+      <td>{% ifnotequal None a.time %} {{ a.time }} {% else %} {% endifnotequal %}</td>
+      <td>{{ a.type_event }} </td>
+      <td>{{ a.phase }} </td>
+      <td>{{ a.location }} </td>
+      <td>{{ a.country }} </td>
+      <td>{% ifnotequal None a.total_occupants %} {{ a.total_occupants }} {% else %} {% endifnotequal %}</td>
+      <td>{% ifnotequal None a.total_fatalities %} {{ a.total_fatalities }} {% else %} {% endifnotequal %}</td>
+      <td>{% ifnotequal None a.aircraft_damage %} {{ a.aircraft_damage }} {% else %} {% endifnotequal %}</td>
+      <td>{% ifnotequal None a.aircraft_fate %} {{ a.aircraft_fate }} {% else %} {% endifnotequal %}</td>
+    </tr>
+   {% endfor %}
+  </table>
+{% endif %}
+</body>
+</html>

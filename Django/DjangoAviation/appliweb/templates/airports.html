@@ -1,0 +1,57 @@
+<!-- fichier airports.html --> 
+<html>
+<head> 
+  <title> Table airports -</title>
+  <style>   
+    table.mon_tableau  {
+        border-collapse: collapse;
+    }
+    table.mon_tableau td {
+       border: 1px solid #5555;
+       padding: 0.3em;
+       font-family: "Sans-serif";
+       font-size: 12px;
+    }
+    table.mon_tableau tr:nth-child(even)  {background: #EEE}
+    table.mon_tableau tr:nth-child(odd) {background: #FFF}
+    td.titre {color : blue; background : lightgrey;}
+  </style>
+</head>
+
+<body> 
+
+ <!-- <h1> Format de présentation : id - code icao - code iata - nom  - ville - pays - latitude - longitude - altitude  </h1> -->
+
+{% if rien %}
+  Aucun aéroport enregistré
+{% else %}
+  <p>{{ nb }} aéroports enregistrés dans la base de données </p>
+  <table class="mon_tableau">
+  <tr>
+      <td class="titre"> id  </td>
+      <td class="titre"> Code ICAO </td>
+      <td class="titre"> Code IATA  </td>
+      <td class="titre"> Nom </td>
+      <td class="titre"> Ville </td>
+      <td class="titre"> Pays </td>
+      <td class="titre"> Latitude </td>
+      <td class="titre"> Longititude </td>
+      <td class="titre"> Altitude </td>
+    </tr>
+  {% for a in airports %}
+    <tr>
+      <td>{{ a.id }} </td>
+      <td>{{ a.code_icao }} </td>
+      <td>{% ifnotequal None a.code_iata %} {{ a.code_iata }} {% else %} {% endifnotequal %}</td>
+      <td>{{ a.name }} </td>
+      <td>{% ifnotequal None a.city %} {{ a.city }} {% else %} {% endifnotequal %}</td>
+      <td>{{ a.country }} </td>
+      <td>{% ifnotequal None a.altitude %} {{ a.latitude }} {% else %} {% endifnotequal %}</td>
+      <td>{% ifnotequal None a.longitude %} {{ a.longitude }} {% else %} {% endifnotequal %}</td>
+      <td>{% ifnotequal None a.altitude %} {{ a.altitude|floatformat }} {% else %} {% endifnotequal %}</td>
+    </tr>
+   {% endfor %}
+  </table>
+{% endif %}
+</body>
+</html>
