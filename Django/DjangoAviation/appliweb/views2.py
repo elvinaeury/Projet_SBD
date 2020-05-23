@@ -43,7 +43,7 @@ def template2(request):
     destroyed=accidents_events.objects.filter(Q(total_fatalities__gte=0)|Q(aircraft_damage__contains='Destroyed')).count()
     missing=accidents_events.objects.filter(Q(total_fatalities__gte=0)|Q(aircraft_damage__contains='Missing')).count()
     
-    earliest=accidents_events.objects.earliest('date')
+    earliest_=accidents_events.objects.earliest('id').date
     
     types_engs = aircrafts.objects.aggregate(Max('type_engines'))['type_engines__max']
     types_air=aircrafts.objects.exclude(type_aircraft__contains='unknown').aggregate(Max('type_aircraft'))['type_aircraft__max']
@@ -101,7 +101,7 @@ def template2(request):
                       'types_air':types_air,
                       'types_engs':types_engs,
                       'missing':missing,
-                      'earliest':earliest,
+                      'earliest_':earliest_,
                       'accidented_aircrafts':accidented_aircrafts,
                       'days':days,
                       'worst_id':worst_id,
