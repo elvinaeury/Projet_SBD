@@ -151,7 +151,7 @@ for annee in annees :
                 """)
             except ObjectDoesNotExist as err :
                 try : 
-                    accident = accidents_events(identifiant=identifiant,week_day=week_day,date=date,type_event=type_event,
+                    accident = accidents_events(identifiant=identifiant,week_day=week_day,date=date,time=time,type_event=type_event,
                     phase=phase,location=location,country=country,total_occupants=total_occupants,
                     total_fatalities=total_fatalities,aircraft_damage=aircraft_damage,aircraft_fate=aircraft_fate)
                     
