@@ -5,7 +5,6 @@ urlpatterns = [
 
     #####################################################
     # Page d'accueil
-    #path('', views.index, name='index'),
     path('worldmap/',views.worldmap,name='world'),
     
     # map

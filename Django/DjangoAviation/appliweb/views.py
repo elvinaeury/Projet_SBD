@@ -9,12 +9,8 @@ from django.http import HttpResponseRedirect
 from .forms import SearchForm, SearchFormPerDate, SearchFormBetweenTwoDates
 
 
-# Page d'acceuil : vue index déclenchant le template home.tmpl
-def index(request) :
-    #return HttpResponse("Cette page d'accueil est à définir.... \n")
-    return render(request, 'home.tmpl')
-
-
+# Page d'acceuil : vue template2 déclenchant le template analytics2.html 
+# Carte du monde : vue worldmap déclenchant le template worldmap.html
 #############################################################################################
 
 from .views2 import worldmap, template2
