@@ -15,7 +15,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage #gestio
 # Carte du monde : vue worldmap déclenchant le template worldmap.html
 #############################################################################################
 
-from .views2 import worldmap, template2
+from .views2 import worldmap, template2, team
 
 #############################################################################################
 
@@ -49,7 +49,7 @@ def aeroport(request) :
             'paginate' : True
         }
 
-    return render(request, 'airports.tmpl', templateVariables)
+    return render(request, 'airports.html', templateVariables)
 
 
 #vue pour la table accidents_events
@@ -81,7 +81,7 @@ def accident(request) :
             'paginate' : True
         }
 
-    return render(request, 'accidents.tmpl', templateVariables)
+    return render(request, 'accidents.html', templateVariables)
 
 
 ############# Recherches dans la table accidents ############
@@ -101,7 +101,7 @@ def get_search_parameters(request):
     else:
         form = SearchForm()
 
-    return render(request, 'search.tmpl', {'form': form})
+    return render(request, 'search.html', {'form': form})
 
 #vue pour la table accidents_events avec paramètres de recherche
 def accidentSearch(request,year) :
@@ -133,7 +133,7 @@ def accidentSearch(request,year) :
             'paginate' : True
         }
 
-    return render(request, 'accidents.tmpl', templateVariables)
+    return render(request, 'accidents.html', templateVariables)
 
 
 #### Recherche pour une date précise #########
@@ -153,7 +153,7 @@ def get_search_parameters_per_date(request):
     else:
         form = SearchFormPerDate()
 
-    return render(request, 'search.tmpl', {'form': form})
+    return render(request, 'search.html', {'form': form})
 
 #vue pour la table accidents_events avec paramètres de recherche par date
 def accidentSearchPerDate(request,date) :
@@ -185,7 +185,7 @@ def accidentSearchPerDate(request,date) :
             'paginate' : True
         }
 
-    return render(request, 'accidents.tmpl', templateVariables)
+    return render(request, 'accidents.html', templateVariables)
 
 
 #### Recherche entre deux dates #########
@@ -209,7 +209,7 @@ def get_search_parameters_per_dates(request):
     else:
         form = SearchFormBetweenTwoDates()
 
-    return render(request, 'search.tmpl', {'form': form})
+    return render(request, 'search.html', {'form': form})
 
 #vue pour la table accidents_events avec paramètres de recherche par date
 def accidentSearchPerDates(request,dateDebut,dateFin) :
@@ -241,10 +241,10 @@ def accidentSearchPerDates(request,dateDebut,dateFin) :
             'paginate' : True
         }
 
-    return render(request, 'accidents.tmpl', templateVariables)
+    return render(request, 'accidents.html', templateVariables)
 
 
 ### vue pour lien de rédirection vers les filtres pour accidents
 
 def tableAccidents(request) :
-    return render(request, 'tableAccidents.tmpl')
+    return render(request, 'tableAccidents.html') 

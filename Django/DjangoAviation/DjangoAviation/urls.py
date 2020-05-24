@@ -1,5 +1,4 @@
 """DjangoAviation URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
@@ -15,8 +14,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+#from DjangoAviation/appliweb import views 
+#from .settings.py import BASE_DIR
+from appliweb import views
+#import os 
+#import sys
+
+#from sys.path.insert(1, '/DjangoAviation/appliweb/') import views
 
 urlpatterns = [
+    path('',views.team,name='team'),
     path('appliweb/', include('appliweb.urls')),
     path('admin/', admin.site.urls),
 ]

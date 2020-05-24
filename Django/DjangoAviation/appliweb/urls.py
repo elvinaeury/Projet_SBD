@@ -29,4 +29,5 @@ urlpatterns = [
 
     # lien de gestion de la table accident à mettre sur la page d'accueil
     path('tableaccidents/',views.tableAccidents),
+    
 ]

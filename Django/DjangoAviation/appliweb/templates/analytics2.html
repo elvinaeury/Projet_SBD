@@ -27,9 +27,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container w3-row">
-    <div class="w3-col s4">
-      <img src="{% static 'team.jpg' %}" class="w3-circle w3-margin-right" style="width:90px">
-    </div>
     <div class="w3-col s8 w3-bar">
       <span>Welcome from, <strong>Dream Team</strong></span><br>
       <a href="https://github.com/elvinaeury/Projet_SBD" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
@@ -41,6 +38,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="/" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Page d'accueil</a>
     <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
     <a href="/appliweb/aeroport/" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Airports</a>
     <a href="/appliweb/tableaccidents/" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i> Parcourir la table Accidents</a>
@@ -55,10 +53,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px;margin-top:43px;">
 
-  <!-- Header -->
+
+<!-- Header -->
   <header class="w3-container" style="padding-top:22px">
     <h5><b><i class="fa fa-dashboard"></i> AIRCRAFT ACCIDENTS HISTORICAL DATA FROM {{ earliest_}} TO March 2020.</b></h5>
   </header>
+
 
   <div class="w3-row-padding w3-margin-bottom">
     <div class="w3-quarter">
@@ -66,8 +66,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <div class="w3-center">
           <h4> Number of Casualties </h4>
         </div>
-        <div class="w3-clear"></div>
-        <h5>{{ nb1 }}</h5>
+        <div class="w3-clear">  </div>
+        <div class="w3-center">{{ nb1 }}</div>
       </div>
     </div>
     <div class="w3-quarter">
@@ -76,25 +76,26 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           <h4>Most accidented weekday</h4>
         </div>
         <div class="w3-clear"></div>
-        <h5> {{ days}}</h5>
+        <div class="w3-center">{{ days }}</div>
       </div>
     </div>
     <div class="w3-quarter">
       <div class="w3-container w3-teal w3-padding-16">
         <div class="w3-center">
-          <h5>Country with most fatal accident</h5>
+          <h4>Most accidented country</h4>
         </div>
         <div class="w3-clear"></div>
-        <h6>{{ worst_country }}</h6>
+        <div class="w3-center">{{ worst_country }}</div>
       </div>
     </div>
     <div class="w3-quarter">
       <div class="w3-container w3-orange w3-text-white w3-padding-16">
         <div class="w3-center">
-          <h5>Date of the most fatal accident</h5>
+          <h4>Date with most fatalities</h4>
         </div>
         <div class="w3-clear"></div>
-        <h5>{{ worst_date}}</h5>
+        <div class="w3-center">{{ worst_date }}</div>
+    
       </div>
     </div>
   </div>
@@ -104,7 +105,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       <div class="w3-third">
         <h5></h5>
         {% load static %}
-        <img src="{% static 'airplane.png' %}" alt="avion" width="1350" height="800"/>
+        <img src="{% static 'airplane4.jpg' %}" alt="avion" width="1350" height="800"/>
       </div>
       <div class="w3-twothird">
       
@@ -134,22 +135,23 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <h5>Flight Info</h5>
     <p>Commercial planes </p>
     <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-green" style="width:{{ perc_pass}}%">{{ perc_pass}}%</div>
+      <div class="w3-container w3-center w3-padding w3-green" style="width:{{perc_pass|floatformat:'0'}}%">{{ perc_pass}}%</div>
     </div>
 
     <p>Military planes</p>
     <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-orange" style="width:{{ perc_military}}%">{{ perc_military}}%</div>
+      <div class="w3-container w3-center w3-padding w3-orange" style="width:{{perc_military|floatformat:'0'}}%">{{ perc_military}}%</div>
     </div>
 
     <p>Cargo and Ferry planes</p>
     <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-red" style="width:{{ perc_cargo}}%">{{ perc_cargo}}%</div>
+      <div class="w3-container w3-center w3-padding w3-red" style="width:{{perc_cargo|floatformat:'0'}}%">{{ perc_cargo}}%</div>
     </div>
 
     <p>Test and Research planes</p>
+   
     <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-blue" style="width:{{ perc_test}}%">{{ perc_test}}%</div>
+    <div class="w3-container w3-center w3-padding w3-blue" style="width:{{perc_test|floatformat:'0'}}%">{{ perc_test}}%</div>
     </div>
 
   </div>
@@ -213,7 +215,7 @@ function hideElem() {
 
 
 <div id="myImg" style="display:none">
-<img id="myImg" src="{% static 'top50_accidents1.png' %}" width="1000" height="500" >
+<img id="myImg" src="{% static 'top50_accidents.png' %}" width="1000" height="500" >
 </div>
 
 
