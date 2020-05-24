@@ -51,9 +51,9 @@ def template2(request):
     
     accidented_aircrafts=aircrafts.objects.only('type_aircraft').filter(id_aircraft__in=cas.values('id')).exclude(type_aircraft__contains='unknown').aggregate(Max('type_aircraft'))['type_aircraft__max']
   
-    worst_id=accidents_events.objects.latest('total_fatalities').id
-    worst_country=accidents_events.objects.latest('total_fatalities').country
-    worst_date=accidents_events.objects.latest('total_fatalities').date
+    worst_id=accidents_events.objects.exclude(total_fatalities__isnull=True).latest('total_fatalities').id
+    worst_country=accidents_events.objects.exclude(total_fatalities__isnull=True).latest('total_fatalities').country
+    worst_date=accidents_events.objects.exclude(total_fatalities__isnull=True).latest('total_fatalities').date
     
     worst_aircraft=aircrafts.objects.filter(id=worst_id).aggregate(Max('type_aircraft'))['type_aircraft__max']
     
