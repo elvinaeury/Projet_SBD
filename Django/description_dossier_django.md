@@ -41,7 +41,7 @@ L'application réalisée offre quelques fonctionnalités pour parcourir les donn
 
 Dès la page d'accueil, l'utilisateur a accès à certaines informations et statistiques fournies par les vues et issues du croisement de différentes tables de notre base de données.
 
-En plus de cela, il a aussi la possibilité de parcourir certaines tables comme la table enregistrant les aéroports. IL a peut aussi parcourir la table des accidents soit globalement, soit en la filtrant suivant une année précise, consulter les accidents survenus à une date précise de son choix ou afficher tous les accidents survenus entre deux dates exactes qu'il aura choisies. 
+En plus de cela, il a aussi la possibilité de parcourir certaines tables comme la table enregistrant les aéroports. Il peut aussi parcourir la table des accidents soit globalement, soit en la filtrant suivant une année précise, consulter les accidents survenus à une date précise de son choix ou afficher tous les accidents survenus entre deux dates exactes qu'il aura choisies. 
 
 Ces possibilités de recherche ont été implentées grâce aux formulaires Django. Les résultats sont rendus sur plusieurs pages suivant le nombre d'enregistrements statisfaisant la requête lancée, ce qui permet un chargement rapide des pages. Cette pagination a été faite grâce au module `Paginator` de Django.
 
