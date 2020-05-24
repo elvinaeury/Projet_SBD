@@ -47,7 +47,7 @@ def template2(request):
     
     types_engs = aircrafts.objects.aggregate(Max('type_engines'))['type_engines__max']
     types_air=aircrafts.objects.exclude(type_aircraft__contains='unknown').aggregate(Max('type_aircraft'))['type_aircraft__max']
-    days=accidents_events.objects.exclude(total_fatalities=0).aggregate(Max('week_day'))['week_day__max']
+    days=accidents_events.objects.exclude(total_fatalities__isnull=True).exclude(total_fatalities=0).aggregate(Max('week_day'))['week_day__max']
     
     accidented_aircrafts=aircrafts.objects.only('type_aircraft').filter(id_aircraft__in=cas.values('id')).exclude(type_aircraft__contains='unknown').aggregate(Max('type_aircraft'))['type_aircraft__max']
   
