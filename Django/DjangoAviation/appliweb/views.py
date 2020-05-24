@@ -8,6 +8,8 @@ from appliweb.models import airports, accidents_events, aircrafts, fatalities_re
 from django.http import HttpResponseRedirect
 from .forms import SearchForm, SearchFormPerDate, SearchFormBetweenTwoDates
 
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage #gestion de la pagination
+
 
 # Page d'acceuil : vue template2 déclenchant le template analytics2.html 
 # Carte du monde : vue worldmap déclenchant le template worldmap.html
@@ -20,21 +22,66 @@ from .views2 import worldmap, template2
 
 #vue pour la table airports
 def aeroport(request) :
-    return render(request, 'airports.tmpl', 
-        {                                          
-            'airports': airports.objects.all(),
-            'nb': airports.objects.count(),
-            'rien': airports.objects.count()==0
-        })
+    airports_list = airports.objects.all()
+    nb = airports.objects.count()
+    rien = airports.objects.count()==0
+
+    #découpage en pages
+    paginator = Paginator(airports_list,50)
+
+    #récupération de la page courante
+    page = request.GET.get('page')
+
+    #renvoyer uniquement cette page et pas les autres
+    try :
+        returnedPage = paginator.page(page)
+    except PageNotAnInteger :
+        #Si page n'est pas un entier, on rend la première page
+        returnedPage = paginator.page(1)
+    except EmptyPage :
+        #Si page est en dehors des limites, on rend la dernière page
+        returnedPage = paginator.page(paginator.num_pages)
+
+    templateVariables = {                                          
+            'airports': returnedPage,
+            'nb': nb,
+            'rien': rien,
+            'paginate' : True
+        }
+
+    return render(request, 'airports.tmpl', templateVariables)
+
 
 #vue pour la table accidents_events
 def accident(request) :
-    return render(request, 'accidents.tmpl', 
-        {                                          
-            'accidents': accidents_events.objects.all(),
-            'nb': accidents_events.objects.count(),
-            'rien': accidents_events.objects.count()==0
-        })
+    accidents_list = accidents_events.objects.all()
+    nb = accidents_events.objects.count()
+    rien = accidents_events.objects.count()==0
+
+    #découpage en pages
+    paginator = Paginator(accidents_list,50)
+
+    #récupération de la page courante
+    page = request.GET.get('page')
+
+    #renvoyer uniquement cette page et pas les autres
+    try :
+        returnedPage = paginator.page(page)
+    except PageNotAnInteger :
+        #Si page n'est pas un entier, on rend la première page
+        returnedPage = paginator.page(1)
+    except EmptyPage :
+        #Si page est en dehors des limites, on rend la dernière page
+        returnedPage = paginator.page(paginator.num_pages)
+
+    templateVariables = {                                          
+            'accidents': returnedPage,
+            'nb': nb,
+            'rien': rien,
+            'paginate' : True
+        }
+
+    return render(request, 'accidents.tmpl', templateVariables)
 
 
 ############# Recherches dans la table accidents ############
@@ -60,12 +107,33 @@ def get_search_parameters(request):
 def accidentSearch(request,year) :
     queryset = accidents_events.objects.filter(identifiant__startswith=year).order_by('identifiant')
     #queryset = accidents_events.objects.filter(identifiant[:4]=year).order_by('identifiant')
-    return render(request, 'accidents.tmpl', 
-        {                                          
-            'accidents': queryset,
-            'nb': queryset.count(),
-            'rien': queryset.count()==0
-        })
+    nb = queryset.count()
+    rien= queryset.count()==0
+    
+    #découpage en pages
+    paginator = Paginator(queryset,50)
+
+    #récupération de la page courante
+    page = request.GET.get('page')
+
+    #renvoyer uniquement cette page et pas les autres
+    try :
+        returnedPage = paginator.page(page)
+    except PageNotAnInteger :
+        #Si page n'est pas un entier, on rend la première page
+        returnedPage = paginator.page(1)
+    except EmptyPage :
+        #Si page est en dehors des limites, on rend la dernière page
+        returnedPage = paginator.page(paginator.num_pages)
+
+    templateVariables = {                                          
+            'accidents': returnedPage,
+            'nb': nb,
+            'rien': rien,
+            'paginate' : True
+        }
+
+    return render(request, 'accidents.tmpl', templateVariables)
 
 
 #### Recherche pour une date précise #########
@@ -91,12 +159,33 @@ def get_search_parameters_per_date(request):
 def accidentSearchPerDate(request,date) :
     queryset = accidents_events.objects.filter(identifiant__startswith=date).order_by('identifiant')
     #queryset = accidents_events.objects.filter(identifiant[:4]=year).order_by('identifiant')
-    return render(request, 'accidents.tmpl', 
-        {                                          
-            'accidents': queryset,
-            'nb': queryset.count(),
-            'rien': queryset.count()==0
-        })
+    nb = queryset.count()
+    rien= queryset.count()==0
+    
+    #découpage en pages
+    paginator = Paginator(queryset,50)
+
+    #récupération de la page courante
+    page = request.GET.get('page')
+
+    #renvoyer uniquement cette page et pas les autres
+    try :
+        returnedPage = paginator.page(page)
+    except PageNotAnInteger :
+        #Si page n'est pas un entier, on rend la première page
+        returnedPage = paginator.page(1)
+    except EmptyPage :
+        #Si page est en dehors des limites, on rend la dernière page
+        returnedPage = paginator.page(paginator.num_pages)
+
+    templateVariables = {                                          
+            'accidents': returnedPage,
+            'nb': nb,
+            'rien': rien,
+            'paginate' : True
+        }
+
+    return render(request, 'accidents.tmpl', templateVariables)
 
 
 #### Recherche entre deux dates #########
@@ -126,12 +215,33 @@ def get_search_parameters_per_dates(request):
 def accidentSearchPerDates(request,dateDebut,dateFin) :
     queryset = accidents_events.objects.filter(identifiant__gte=dateDebut,identifiant__lte=dateFin).order_by('identifiant')
     #queryset = accidents_events.objects.filter(identifiant[:4]=year).order_by('identifiant')
-    return render(request, 'accidents.tmpl', 
-        {                                          
-            'accidents': queryset,
-            'nb': queryset.count(),
-            'rien': queryset.count()==0
-        })
+    nb = queryset.count()
+    rien= queryset.count()==0
+    
+    #découpage en pages
+    paginator = Paginator(queryset,50)
+
+    #récupération de la page courante
+    page = request.GET.get('page')
+
+    #renvoyer uniquement cette page et pas les autres
+    try :
+        returnedPage = paginator.page(page)
+    except PageNotAnInteger :
+        #Si page n'est pas un entier, on rend la première page
+        returnedPage = paginator.page(1)
+    except EmptyPage :
+        #Si page est en dehors des limites, on rend la dernière page
+        returnedPage = paginator.page(paginator.num_pages)
+
+    templateVariables = {                                          
+            'accidents': returnedPage,
+            'nb': nb,
+            'rien': rien,
+            'paginate' : True
+        }
+
+    return render(request, 'accidents.tmpl', templateVariables)
 
 
 ### vue pour lien de rédirection vers les filtres pour accidents

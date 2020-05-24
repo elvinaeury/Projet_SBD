@@ -26,6 +26,25 @@
   Aucun aéroport enregistré
 {% else %}
   <p>{{ nb }} aéroport(s) enregistré(s) dans la base de données </p>
+
+<!-- Pagination de haut de page -->
+
+  {% if paginate %}
+    <div></div>
+    <nav>
+      <ul>
+        {% if airports.has_previous %}
+            <li><a href="?page={{ airports.previous_page_number }}">Précédent</a></li>
+        {% endif %}
+        {% if airports.has_next %}
+            <li><a href="?page={{ airports.next_page_number }}">Suivant</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  {% endif %}
+
+<!-- Fin pagination de haut de page -->
+
   <table class="mon_tableau">
   <tr>
       <td class="titre"> id  </td>
@@ -53,5 +72,24 @@
    {% endfor %}
   </table>
 {% endif %}
+
+<!-- Pagination de bas de page -->
+
+{% if paginate %}
+  <div></div>
+  <nav>
+    <ul>
+      {% if airports.has_previous %}
+          <li><a href="?page={{ airports.previous_page_number }}">Précédent</a></li>
+      {% endif %}
+      {% if airports.has_next %}
+          <li><a href="?page={{ airports.next_page_number }}">Suivant</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
+
+<!-- Fin pagination de bas de page -->
+
 </body>
 </html>

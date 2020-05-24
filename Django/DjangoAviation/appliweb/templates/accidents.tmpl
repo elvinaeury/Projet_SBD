@@ -26,6 +26,27 @@
   Aucun accident enregistré
 {% else %}
   <p>{{ nb }} accident(s) enregistré(s) dans la base de données </p>
+
+
+<!-- Pagination de haut de page -->
+
+  {% if paginate %}
+    <div></div>
+    <nav>
+      <ul>
+        {% if accidents.has_previous %}
+            <li><a href="?page={{ accidents.previous_page_number }}">Précédent</a></li>
+        {% endif %}
+        {% if accidents.has_next %}
+            <li><a href="?page={{ accidents.next_page_number }}">Suivant</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  {% endif %}
+
+<!-- Fin pagination de haut de page -->
+
+
   <table class="mon_tableau">
   <tr>
       <td class="titre"> id  </td>
@@ -61,5 +82,26 @@
    {% endfor %}
   </table>
 {% endif %}
+
+
+<!-- Pagination de bas de page -->
+
+{% if paginate %}
+  <div></div>
+  <nav>
+    <ul>
+      {% if accidents.has_previous %}
+          <li><a href="?page={{ accidents.previous_page_number }}">Précédent</a></li>
+      {% endif %}
+      {% if accidents.has_next %}
+          <li><a href="?page={{ accidents.next_page_number }}">Suivant</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
+
+<!-- Fin pagination de bas de page -->
+
+
 </body>
 </html>
