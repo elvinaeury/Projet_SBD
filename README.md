@@ -79,6 +79,14 @@ Les programmes réalisés et les fonctionalités à venir seront décrits de la 
 ### Etat de la base des données
 Le modèle des données conçu sous postgreSQL et décrit dans le fichier [modele_relationnel/descriptif_modele_relationnel_final.md](https://github.com/elvinaeury/Projet_SBD/blob/master/modele_relationnel/description_modele_relationnel_final.md) a été réalisé et peuplé avec succès via [Django](https://github.com/elvinaeury/Projet_SBD/tree/master/Django) et les détails sont à retrouver dans le fichier [description_dossier_django.md](https://github.com/elvinaeury/Projet_SBD/blob/master/Django/description_dossier_django.md)
 
+### Etat de l'application web
+
+Application web réalisée et fonctionnelle :
+- Page d'accueil
+- Quelques statistiques issues du croisement de différentes tables
+- Affichage des tables et pagination des résultats
+- Filtres de recherche pour les accidents
+
 ## TO-DO List
 
 - [x] Choisir toutes les données et les récuperer
@@ -89,9 +97,9 @@ Le modèle des données conçu sous postgreSQL et décrit dans le fichier [model
 - [x] Nettoyer les données récupérées
 - [x] Création du projet django [DjangoAviation](https://github.com/elvinaeury/Projet_SBD/tree/master/Django/DjangoAviation), de l'application [appliweb](https://github.com/elvinaeury/Projet_SBD/tree/master/Django/DjangoAviation/appliweb) et peuplement de la base de données.
 - [x] Jouer les scripts django et de peuplement sur le serveur de l'université également
-- [ ] Commencer la partie framework
-- [ ] Créer les vues et templates correspondant aux requêtes envisagées
-- [ ] Etudier l'aspect visualisation et présentation des requêtes (css, html, graphiques, images, etc)
-- [ ] Tester l'utlisation du timestamp pour les champs date et time
-- [ ] Finaliser l'application et régler les derniers points.
+- [x] Commencer la partie framework
+- [x] Créer les vues et templates correspondant aux requêtes envisagées
+- [x] Etudier l'aspect visualisation et présentation des requêtes (css, html, graphiques, images, etc)
+- [x] Tester l'utlisation du timestamp pour les champs date et time
+- [x] Finaliser l'application et régler les derniers points.
 - [ ] Bonus : Faire de l'analyse des données (datamining) et des stats si le temps et les données le permettent et créer des vues correspondantes

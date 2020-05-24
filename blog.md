@@ -22,3 +22,7 @@ Ajout du dossier relatif au processus de nettoyage et contenant les données net
 Ajout du dossier django avec partie ORM réalisée
 ### 14/04/2020
 Exécution des scripts django, création et peuplement des tables sur le serveur postgres de l'université
+### 23/05/2020
+Importation de la partie framework depuis le dépôt git privé
+### 24/05/2020 
+Réglages de derniers points et finalisation de l'application web
