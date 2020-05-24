@@ -82,10 +82,13 @@ Le modèle des données conçu sous postgreSQL et décrit dans le fichier [model
 ### Etat de l'application web
 
 Application web réalisée et fonctionnelle :
+
 - Page d'accueil
 - Quelques statistiques issues du croisement de différentes tables
 - Affichage des tables et pagination des résultats
 - Filtres de recherche pour les accidents
+
+La description en détails de ces fonctionnalités et les outils utilisés pour les mettre en place est faite dans [description_dossier_django.md](https://github.com/elvinaeury/Projet_SBD/blob/master/Django/description_dossier_django.md), `partie framework`.
 
 ## TO-DO List
 
