@@ -5,7 +5,7 @@ Bienvenue sur ce dépôt git consacré au projet universitaire de notre cours de
 Ce projet est réalisé par : 
 * [Destin ASHUZA CIRUMANGA](https://github.com/dest-ash)
 * [Nadia GHERNAOUT](https://github.com/nadatum)
-* [Elvina GOVENDASAMY](https://github.com/elvinaeury)
+* [Elvina EURY](https://github.com/elvinaeury)
 
 ## Table of contents
 * [Cahier des charges](#cahier-des-charges)
