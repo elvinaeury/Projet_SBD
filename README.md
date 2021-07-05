@@ -1,4 +1,4 @@
-# PROJET_SGBD
+# PROJET_SGBD_Django 
 
 Bienvenue sur ce dépôt git consacré au projet universitaire de notre cours de [bases de données relationnelles](https://math.univ-angers.fr/~ducrot/bddr/) du Master 1 Data Science de l'Université d'Angers. 
 
